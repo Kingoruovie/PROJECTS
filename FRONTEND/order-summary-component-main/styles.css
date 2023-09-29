@@ -18,7 +18,7 @@ body {
     font-size: 16px;
     background-image: url(./images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-color: hsl(225, 100%, 94%);
     height: 100vh;
     display: flex;
@@ -115,7 +115,7 @@ a:active {
     body {
         background-image: url(./images/pattern-background-mobile.svg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
     }
 
     main {
