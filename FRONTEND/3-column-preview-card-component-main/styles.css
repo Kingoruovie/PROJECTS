@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Default */
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 720px;
+    height: 400px;
+    display: flex;
+    border-radius: 8px;
+}
+
+main article {
+    padding: 2rem;
+}
+
+main article:nth-child(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 8px 0 0 8px;
+}
+
+main article:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+
+main article:nth-child(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 8px 8px 0;
+}
+
+article img {
+    width: 45px;
+    height: auto;
+}
+
+article .heading {
+    font-family: 'Big Shoulders Display', sans-serif;
+    color: hsl(0, 0%, 95%);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 1.3rem 0;
+}
+
+article p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+article .learn {
+    margin-top: 5rem;
+}
+
+
+article a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.one {
+    color: hsl(31, 77%, 52%);
+}
+
+.two {
+    color: hsl(184, 100%, 22%);
+}
+
+.three {
+    color: hsl(179, 100%, 13%);
+}
+
+article a:active {
+    background-color: inherit;
+    color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 670px) {
+    main {
+        flex-direction: column;
+        width: 80vw;
+        height: min-content;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    main article:nth-child(1) {
+        border-radius: 8px 8px 0 0;
+    }
+
+    main article:nth-child(3) {
+        border-radius: 0 0 8px 8px;
+    }
+    
+    article .learn {
+    margin-top: 2rem;
+}
+}
