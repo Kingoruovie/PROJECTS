@@ -17,8 +17,8 @@ data_format = [
     [
     "Title",
     "Producer",
-    "Subscribers"
-    "Information"
+    "Subscribers",
+    "Information",
     "Total Comment",
     "Some Comments",
     ]
@@ -48,13 +48,13 @@ def gradual_scroll(driver, scroll_height, page_height_in_view):
 
 def get_videos_link(query):
     url = "https://www.youtube.com/results?search_query=" + query
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=chrome_options)
     
     driver.get(url=url)
     driver.implicitly_wait(5)
     time.sleep(10)
 
-    scroll_count_first_phase = 1
+    scroll_count_first_phase = 30
     for _ in range(scroll_count_first_phase):
         driver.find_element(
 			by=By.TAG_NAME, 
@@ -130,30 +130,33 @@ def scrape_watch(url):
     )
     gradual_scroll(driver, scroll_height, page_height_in_view)
 
-    video_title = driver.find_element(by=By.CSS_SELECTOR, value="div#title h1").text
-    video_producer = driver.find_element(by=By.CSS_SELECTOR, value="div#upload-info a").text
-    producer_sub_count = driver.find_element(by=By.ID, value="owner-sub-count").text
-    video_info = driver.find_element(by=By.CSS_SELECTOR, value="div#info-container #info").text
-    video_comments_count = driver.find_element(by=By.CSS_SELECTOR, value="div#title h2").text
-    some_comments = [
-        comment_element.text \
-        for comment_element in \
-        driver.find_elements(
-            by=By.CSS_SELECTOR, 
-            value="div#comment-content"
-        )
-    ]
+    try:
+        video_title = driver.find_element(by=By.CSS_SELECTOR, value="div#title h1").text
+        video_producer = driver.find_element(by=By.CSS_SELECTOR, value="div#upload-info a").text
+        producer_sub_count = driver.find_element(by=By.ID, value="owner-sub-count").text
+        video_info = driver.find_element(by=By.CSS_SELECTOR, value="div#info-container #info").text
+        video_comments_count = driver.find_element(by=By.CSS_SELECTOR, value="div#title h2").text
+        some_comments = [
+            comment_element.text \
+            for comment_element in \
+            driver.find_elements(
+                by=By.CSS_SELECTOR, 
+                value="div#comment-content"
+            )
+        ]
 
-    particular_video_detail = [
-        video_title,
-        video_producer,
-        producer_sub_count,
-        video_info,
-        video_comments_count,
-        some_comments 
-    ]
+        particular_video_detail = [
+            video_title,
+            video_producer,
+            producer_sub_count,
+            video_info,
+            video_comments_count,
+            some_comments 
+        ]
 
-    data_format.append(particular_video_detail)
+        data_format.append(particular_video_detail)
+    except:
+        pass
     driver.quit()
 
 
@@ -178,10 +181,10 @@ def get_the_comments_and_views(list_of_urls):
 
 if __name__ == "__main__":
     list_of_video_links = get_videos_link(query)
-    get_the_comments_and_views(list_of_video_links[:10])
+    get_the_comments_and_views(list_of_video_links[:130])
 
     
-    name_of_file = "_".join(query.split("+")) + ".csv"
+    name_of_file = "./youtube_scraper/"+ "_".join(query.split("+")) + ".csv"
     with open(name_of_file, mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerows(data_format)
