@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+*, ::before, *::after {
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: "Inter", Verdana, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: hsl(0, 0%, 8%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: hsl(0, 0%, 12%);
+    width: 380px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 40px 30px;
+    color: hsl(0, 0%, 100%);
+}
+
+/* || Profile Detail */
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 50px;
+}
+
+.profile-detail h2 {
+    font-size: 1.4rem;
+    margin-bottom: -8px;
+    
+}
+
+.profile-detail p {
+    color: hsl(75, 94%, 57%);
+    font-weight: 500;
+}
+
+
+/* || Role */
+.role {
+    margin: 25px 0;
+}
+
+
+/* || Contact */
+section.contact-info {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: 500;
+}
+
+a:hover, a:active {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+}
+
+
+@media screen and (max-width: 375px) {
+    main {
+        width: 350px;
+    }
+}
