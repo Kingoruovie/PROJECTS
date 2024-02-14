@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 13px;
+    height: 100vh;
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 720px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    display: flex;
+    /* overflow: hidden; */
+    box-shadow: 0 0 20px 15px hsla(212, 23%, 69%, 0.1);
+    position: relative;
+}
+
+main > img {
+    display: block;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+section {
+    padding: 2rem 2.5rem;
+    color: hsl(214, 17%, 51%);
+}
+
+h1 {
+    margin-top: 0;
+    color: hsl(217, 19%, 35%);
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > .profile > img {
+        width: 40px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    & .profile {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        & .name-date p:nth-child(1) {
+            color: hsl(217, 19%, 35%);
+        }
+
+        & .name-date p+p {
+            margin-top: -12px;
+        }
+    }
+}
+
+.share {
+    background-color: hsl(210, 46%, 95%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+    & svg {
+        fill: #6E8098;
+    }
+}
+
+.share.active {
+    background-color: hsl(214, 17%, 51%);
+
+    & svg {
+        fill: hsl(0, 0%, 100%);
+    }
+}
+
+.share-container {
+    display: none;
+    position: absolute;
+    top: 45%;
+    right: -70px;
+    z-index: 1;
+}
+
+.share-inner-container {
+    padding: 2px 40px;
+    border-radius: 8px;
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.share-inner-container::after {
+    content: "";
+    background-color: hsl(217, 19%, 35%);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 45%;
+    bottom: -10px;
+    transform: rotateZ(45deg);
+    
+}
+
+.share-inner-container p {
+    text-transform: uppercase;
+    color: hsl(214, 17%, 51%);
+    letter-spacing: 0.5ch;
+}
+
+
+
+@media screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+        max-width: 320px;
+        overflow: hidden;
+    }
+
+    main > img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-radius: 0;
+    }
+
+    section {
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .share-container {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 85%;
+        z-index: 1;
+    }
+
+    .share-inner-container {
+        padding: 15px 40px 20px;
+        /* border-radius: 8px; */
+        border-radius: 0;
+        background-color: hsl(217, 19%, 35%);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    
+    }
+
+    .share-inner-container::after {
+        display: none;
+        
+    }
+
+    .share {
+        z-index: 2;
+    }
+    
+}
