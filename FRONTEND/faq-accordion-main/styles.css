@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url("assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "WorkSans Italic";
+    src: url("assets/fonts/WorkSans-Italic-VariableFont_wght.ttf");
+    font-style: italic;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "WorkSans", Verdana, Tahoma, sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background-image: url("assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: hsl(275, 100%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(292, 16%, 49%);
+}
+
+main {
+    max-width: 550px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 1.8rem 2.2rem;
+    box-shadow: 0px 0px 8px 8px hsla(293, 16%, 49%, 0.1);
+}
+
+header {
+    display: flex;
+    gap: 1rem;
+    
+
+    & h1 {
+        margin: 8px 0;
+        font-size: 3rem;
+        color: hsl(292, 42%, 14%);
+    }
+}
+
+section article+article {
+    margin-top: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+
+    & p {
+        color: hsl(292, 42%, 14%);
+        font-size: 0.8rem;
+    }
+
+    & p:hover {
+        color: #AD28EB;
+    }
+
+}
+
+
+.description {
+    font-size: 0.9rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s;
+}
+
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url("assets/images/background-pattern-mobile.svg");
+    }
+
+    main {
+        width: 320px;
+    }
+}
+
+
