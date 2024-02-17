@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+main section {
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    flex-grow: 1; 
+    padding-top: 4rem;
+    padding-left: 12rem; 
+    color: hsl(0, 36%, 70%);
+}
+
+main > img {
+    max-height: 100%;
+    width: auto;
+    display: block;
+}
+
+section header {
+    margin-top: 10rem;
+}
+
+
+h1 {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: 0.8rem;
+    color: hsl(0, 6%, 24%);
+}
+
+h1 span{
+    font-weight: 300;
+    display: block;
+    color: hsl(0, 36%, 70%);
+}
+
+
+section p {
+    width: 450px;
+    line-height: 1.5;
+    margin: 2rem 0;
+}
+
+form {
+    position: relative;
+}
+
+form > span:nth-child(1) {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 340px;
+}
+
+input[type="email"] {
+    padding: 1.2rem 5rem 1.2rem 2rem;
+    border-radius: 30px;
+    border: 1px solid hsl(0, 36%, 70%);
+    width: 450px;
+    font-size: 1rem;
+    color: hsl(0, 6%, 24%);
+}
+
+input[type="email"]:focus {
+    outline: 1px solid hsl(0, 36%, 70%);
+}
+
+input[type="email"]:invalid {
+    outline: none;
+    border: 1.5px solid hsl(0, 93%, 68%);
+}
+
+input[type="email"]::placeholder {
+    color: hsla(0, 36%, 70%, 0.8);
+    font-family: "Josefin Sans";
+}
+
+button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 30px;
+    vertical-align: bottom;
+    border: none;
+    padding: 1.2rem 3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    box-shadow: -6px 6px 8px hsla(0, 36%, 70%, 0.5);
+}
+
+span.error {
+    padding-left: 1rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    display: block;
+    color: hsl(0, 93%, 68%);
+}
