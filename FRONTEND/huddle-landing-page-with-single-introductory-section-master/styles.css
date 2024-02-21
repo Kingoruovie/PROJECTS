@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --clr-violet: hsl(257, 40%, 49%);
+    --clr-soft-magenta: hsl(300, 69%, 71%);
+    --ff-poppins: "Poppins", Verdana, sans-serif;
+    --ff-open-sans: "Open Sans", Verdana, sans-serif;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--clr-violet);
+    font-family: var(--ff-open-sans);
+    color: hsl(0, 0%, 100%);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+div.wrapper {
+    max-width: 92%;
+    margin-inline: auto; 
+}
+
+header {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    gap: 4rem;
+}
+
+main > img {
+    display: block;
+    width: 100%;
+}
+
+article {
+    position: relative;
+}
+
+
+article h1 {
+    font-weight: var(--fw-600);
+    font-family: var(--ff-poppins);
+    font-size: 2.5rem;
+
+}
+
+article p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+article > a {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem 4rem;
+    border-radius: 35px;
+    display: block;
+    width: fit-content;
+    box-shadow: 0 10px 10px hsl(0, 0%, 0%, 0.2);
+    margin-top: 30px;
+}
+
+.social {
+    width: fit-content;
+    margin-left: auto;
+}
+
+.social a {
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    article h1 {
+        margin-top: 0;
+        font-size: 1.8rem;
+    }
+
+    article p {
+        font-size: 1rem;
+    }
+
+    article a {
+        margin-inline: auto;
+    }
+
+    .social {
+        margin-block: 50px;
+        margin-inline: auto;
+
+    }
+}
