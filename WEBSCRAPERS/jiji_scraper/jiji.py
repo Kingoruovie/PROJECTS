@@ -1,6 +1,8 @@
 import requests
 import pprint
 import csv
+from bs4 import BeautifulSoup
+from pathlib import Path
 
 
 
@@ -41,7 +43,7 @@ main_content = [["Name of product", "Product category", "Product image url", "pr
 while True:
     new_contents = query_jiji(search_value)
     
-    if new_contents is None or page_num > 2:
+    if new_contents is None or page_num >= 200:
         break
         
     main_content.extend(new_contents)
@@ -50,7 +52,7 @@ while True:
     page_num += 1
 
 # File name
-csv_file_name = f"{search_value}_data.csv"
+csv_file_name = Path(f"./jiji_scraper/data/{"_".join(search_value.split(" "))}_data.csv")
 
 # Writing data to CSV file
 with open(csv_file_name, mode="w", newline="") as file:
