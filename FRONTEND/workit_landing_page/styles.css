@@ -1,0 +1,274 @@
+@font-face {
+    font-family: "Fraunces";
+    src: url("assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+    font-style: normal;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #230640;
+    font-family: "Manrope", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background: url("assets/images/bg-patterns/bg-pattern-1.svg"), url("assets/images/bg-patterns/bg-pattern-2.svg"), url("assets/images/bg_up.svg");
+    background-repeat: no-repeat;
+    background-position: left -10vw top 12vh, top 35vh right -3vw, top;
+    background-size: 25vw auto, 15vw auto, 100% 80vh;
+}
+
+.wrapper {
+    width: 80%;
+    margin-inline: auto;
+}
+
+#header img {
+    display: block;
+    width: 60%;
+    margin-inline: auto;
+    margin-block: 5rem;
+}
+
+#apply img {
+    display: block;
+    width: 40%;
+    min-width: 320px;
+
+}
+
+/* || UTILITIES */
+.underline {
+    position: relative;
+    padding-bottom: 3px;
+}
+
+
+.underline::after {
+    content: " ";
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #41F28E;
+
+}
+
+.underline.apply::after {
+    bottom: 0px;
+}
+
+.button {
+    background-color: #41F28E;
+    color: #012619;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #70eca6;
+}
+
+
+
+/* || HEADER */
+header {
+    margin-block-start: 3rem;
+    margin-block-end: 3rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav a:nth-child(2) {
+    color: #fff;
+    font-size: 1.2rem;   
+}
+
+
+/* SECTION HEADER */
+#header {
+    text-align: center;
+}
+
+#header h1 {
+    font-family: "Fraunces", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(2.2rem, 1.5rem + 3vw, 5rem);
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 4rem;
+}
+
+
+/* || SECTION SERVICES */
+#services {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-block-start: 10vw;
+    margin-block-end: 20vw;
+}
+
+article {
+    flex-basis: 320px;
+    flex-grow: 1;
+}
+
+article span {
+    border: 1px solid #a8a8a8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article h2 {
+    font-family: "Fraunces", Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 3rem;
+    /* margin-bottom: -0.2rem; */
+}
+
+article p {
+    line-height: 1.6;
+}
+
+
+/* || SECTION APPLY */
+#apply {
+    position: relative;
+}
+
+#apply img {
+    z-index: 0;
+}
+
+#apply article{
+    z-index: 1;
+    padding: 2rem 2.5rem;
+    /* position: absolute; */
+    position: relative;
+    background-color: #230640;
+    color: #fff;
+    max-width: 650px;
+    /* left: 32%;
+    top: 10vw; */
+    margin-left: 25vw;
+    margin-top: -20vw;
+}
+
+#apply h3 {
+    font-family: "Fraunces", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: clamp(1.5rem, 1.5rem + 1vw, 2rem);
+}
+
+#apply p {
+    padding-bottom: 1.5rem;
+}
+
+#apply a {
+    display: inline-block;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-block-start: 12vw;
+    margin-block-end: 8vw;
+}
+
+.social {
+    margin-top: 3vw;
+}
+
+.social a + a{
+    display: inline-block;
+    margin-left: 20px;   
+}
+
+@media screen and (max-width: 1300px) {
+    body {
+        background-size: 25vw auto, 15vw auto, 100% 70vh;;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        background-size: 25vw auto, 15vw auto, 100% 60vh;;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    #apply img {
+        margin-inline: auto;
+    }
+
+    #apply article {
+        margin-top: -4vw;
+        margin-inline: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* body {
+        background-size: 25vw auto, auto, 100% 50vh;;
+    } */
+    #header img {
+        width: 100%;
+    }   
+}
+
+
+@media screen and (min-width: 740px) and (max-width: 850px) {
+    #services {
+        flex-direction: column;
+        gap: 0px;
+        width: 80vw;
+        margin-inline: auto;
+    }
+
+    #services article {
+        text-align: left;
+        display: flex;
+        flex: 1 0 auto;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+    
+
+    
+    #services article span {
+        flex-grow: 1;
+        
+    }
+
+    #services article div {
+        align-items: flex-start;
+    }
+}
