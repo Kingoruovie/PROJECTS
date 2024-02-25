@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    background-image: url("assets/image-hero-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 70vw auto;
+    background-position: top -12vw right -25vw;
+
+}
+
+.wrapper {
+    width: 80vw;
+    margin-inline: auto;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 35px;
+    background-color: #141A40;
+    color: #F2F2F2;
+}
+
+
+/* || HEADER */
+header {
+    margin-block-start: 1.5rem;
+}
+
+header nav a:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* || MAIN */
+main {
+    margin-top: 10vw;
+}
+
+.mobile {
+    display: none;
+}
+
+/* || SECTION HEADING */
+#heading {
+    max-width: 450px;
+    margin-bottom: 20vw;
+}
+
+#heading h1{
+    font-size: clamp(1.8rem, 1.8rem + 2vw, 3.3rem);
+    color: #141A40;
+}
+
+#heading p {
+    font-size: calc(1rem + 0.1vw);
+    line-height: 1.5;
+    color: #141a40a8;
+    margin-bottom: 4vw;
+    margin-top: -1.5vw;
+}
+
+#heading a {
+    background: linear-gradient(to bottom, #F25D50, #F2389E);
+}
+
+
+/* SECTION COURSES */
+#courses {
+    display: grid;
+    column-gap: 1.5rem;
+    row-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));  
+    margin-bottom: 5vw; 
+}
+
+#courses .cta {
+    background-image: linear-gradient(to bottom, #F25D50, #F2389E);
+    color: #F2F2F2;
+    padding-top: 2.5vw;
+}
+
+.cta h2 {
+    font-weight: 900;
+}
+
+article {
+    padding-inline: 2rem;
+    padding-bottom: 2.5rem;
+    box-shadow: 0px 10px 30px #8d41d91f;
+    border-radius: 10px;
+    position: relative;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+}
+
+.course img {
+    position: absolute;
+    top: -2rem;
+}
+
+.course h3 {
+    color: #141A40;
+    margin-top: 3.5rem;
+    margin-bottom: -0.2rem;
+}
+
+.course p {
+    line-height: 1.5;
+    color: #141a40a8;
+    flex-grow: 1;
+}
+
+.course a {
+    color: #F2389E;
+}
+
+
+/* || FOOTER */
+footer {
+    background-color: #141A40;
+    padding-block: 2rem;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav a:nth-child(2) {
+    background-image: linear-gradient(to bottom, #8D41D9, #F2389E);
+}
+
+
+@media screen and (max-width: 1485px) {
+    #courses {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .wrapper {
+        width: 90vw
+    }
+
+    body {
+        background-image: url("assets/image-hero-tablet.png");
+        background-position: top -6vw right -30vw;
+    }
+}
+
+@media screen and (max-width: 693px) {
+    body {
+        background-image: none;
+    }
+
+    .mobile {
+        display: block;
+        max-width: 100%;
+        margin-inline: auto;
+    }
+
+    #heading {
+        margin-bottom: 5vw;
+    }
+
+    #heading p {
+        margin-bottom: 2rem;
+    }
+
+    header nav img, footer nav img {
+        width: 80px;
+    }
+}
