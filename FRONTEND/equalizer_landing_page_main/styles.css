@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #191826;
+    background-image: url("assets/bg-pattern-1.svg"), url("assets/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top right, top -25vh left -20vw;
+}
+
+.wrapper {
+    width: 80vw;
+    max-width: 1200;
+    margin-inline: auto;
+}
+
+
+/* || HEADER */
+header {
+    margin-top: 3.5rem;
+}
+
+
+/* || MAIN */
+main {
+    margin-top: 8vw;
+}
+
+
+/* || DESCRIPTION */
+#description {
+    width: 70%;
+    min-width: 345px;
+}
+
+#description h1 {
+    font-size: clamp(2rem, 2rem + 4vw, 5rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+#description p {
+    line-height: 1.5;
+}
+
+
+/* || PRICING SECTION */
+#pricing-section {
+    margin-top: 20rem;
+    width: 80vw;
+    max-width: 1152px;
+    min-width: 375px;
+    background-color: #191826;
+    margin-inline: auto;
+    border-radius: 15px;
+    background-image: url("assets/bg-pattern-2.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+
+#pricing-section > img {
+    display: block;
+    max-width: 300px;
+    position: relative;
+    left: 8vw;
+    top: -200px;
+}
+
+.pricing {
+    position: absolute;
+    color: #F2F2F2;
+    background-color: #F26052;
+    padding: 2.2rem;
+    width: 375px;
+    border-radius: 15px;
+    right: 6vw;
+    top: 100px;
+}
+
+.pricing h2 {
+    font-weight: 900;
+}
+
+.pricing > p {
+    line-height: 1.7;
+}
+
+.price p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price {
+    margin-block: 1.5rem;
+}
+
+.price span {
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.app-download a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 10px;
+    padding-block: 1rem;
+}
+
+.app-download a div {
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+.app-download a:nth-child(1) {
+    background-color: #191826;
+    color: #F2F2F2;
+    margin-bottom: 15px;
+}
+
+.app-download a:nth-child(2) {
+    color: #191826;
+    background-color: #F2F2F2;
+}
+
+
+/* FOOTER */
+footer {
+    margin-block-start: 10vw;
+    margin-block-end: 6vw;
+}
+
+footer .wrapper {
+    display: flex;
+    gap: 12vw;
+}
+
+footer > .wrapper > a > img {
+    width: 120px;
+}
+
+footer p {
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+.copyright-social {
+    flex-grow: 1;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+
+.copyright {
+    margin-right: auto;
+}
+
+.social {
+    display: flex;
+    gap: 10px;
+}
+
+.social a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    footer .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
+
+@media screen and (max-width: 890px) {
+    body {
+        background-image: url("assets/bg-pattern-1.svg"), url("assets/bg-main-tablet.png");
+        background-position: top -30px right -30px, top -50px left -300px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .wrapper {
+        width: 90vw;
+    }
+
+    body {
+        background-image: url("assets/bg-main-mobile.png");
+        background-position: top -200px left 100px;
+    }
+
+    #pricing-section {
+        margin-top: 10rem;
+    }
+
+    #pricing-section > img {
+        display: block;
+        max-width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -100px;
+    }
+
+    .pricing {
+        top: unset;
+        bottom: -450px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    footer {
+        margin-top: 500px;
+    }
+
+    .copyright-social {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
