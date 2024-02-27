@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*, *::before, **::after {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    background-color: #FAFAFA;
+}
+
+.mobile-and-tablet {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-weight: 700;
+    color: #FAFAFA;
+    border-radius: 30px;
+}
+
+.dark {
+    background-color: #855FB1;
+}
+
+.dark:hover {
+    background-color: #855fb1dc;
+}
+
+.light {
+    background-color: #4D96a9;
+}
+
+.light:hover {
+    background-color: #4D96a9dc;
+}
+
+.light span {
+    color: #8fe3f9;
+}
+
+.dark span {
+    color: #D9B8FF;
+}
+
+.number-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.number-section__line {
+    height: 100px;
+    width: 1px;
+    background-color: #87879d7a;
+}
+
+.number-section__number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #87879D7A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #87879D;
+    font-weight: 600;
+    background-color: #FAFAFA;
+}
+
+
+/* || HEADER */
+header {
+    text-align: center;
+    margin-block: 4rem;
+}
+
+
+/* || MAIN HERO */
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+#hero img:nth-child(1) {
+    position: relative;
+    left: -40px;
+}
+
+#hero img ~ img {
+    position: relative;
+    top: 60px;
+    right: -40px;
+}
+
+#hero img, #hero article {
+    width: 100%;
+}
+
+#hero article {
+    text-align: center;
+}
+
+#hero article h1 {
+    font-size: clamp(2rem, 1.5rem + 3vw, 4.5rem);
+    line-height: 1;
+    color: #28283D;
+}
+
+#hero article p {
+    color: #87879D;
+    margin-block: 2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+/* || NUMBER SECTION TOP */
+.top {
+    margin-top: 6rem;
+}
+
+
+/* || DESCRIPTION */
+.gallery {
+    width: 80%;
+    max-width: 1100px;
+    margin-inline: auto;
+    display: flex;
+    gap: 3%;
+    margin-block: 4rem;
+}
+
+.gallery img {
+    display: block;
+    width: 22.75%;
+    min-width: 150px;
+    border-radius: 10px;
+}
+
+.details {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 480px;
+    margin-inline: auto;
+}
+
+.details__use-case {
+    color: #4D96a9;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.details h2 {
+    font-size: clamp(1.3rem, 1rem + 2.5vw, 3rem);
+    color: #28283D;
+    line-height: 1;
+    margin-block: 1rem 1.5rem;
+}
+
+.details p {
+    color: #87879D;
+}
+
+.down {
+    position: relative;
+    top: 25px;
+    z-index: 2;
+}
+
+/* || FOOTER */
+footer {
+    background-image: linear-gradient(#4d97a9ad, #4d97a9ad), url("assets/desktop/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-block: 6rem;
+    position: relative;
+    color: #FAFAFA;
+    z-index: 1;
+}
+
+footer > div{
+    display: flex;
+    max-width: 1100px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-inline: auto;
+    column-gap: 4rem;
+}
+
+footer h2 {
+    font-size: clamp(1.3rem, 1.3rem + 2vw, 2.5rem);
+    line-height: 1;
+}
+
+
+footer > div > * {
+    flex: 1 1 0;
+}
+
+footer div a {
+    flex: 0 0 auto;
+}
+
+
+@media screen and (max-width: 1230px) {
+    .mobile-and-tablet {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    #hero article {
+        max-width: 500px;
+        margin-inline: auto;
+    }
+
+    #hero img {
+        display: none;
+    }
+
+    footer > div{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5rem;
+        padding-inline: 2rem;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    section {
+        width: 90vw;
+        margin-inline: auto;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+
+    .gallery {
+        width: 90vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-inline: auto;
+        gap: 1rem;
+    }
+    
+}
