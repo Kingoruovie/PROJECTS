@@ -139,3 +139,12 @@ article div {
 article div span {
     color: var(--clr-purple)
 }
+
+
+@media screen and (max-width: 950px) {
+    form button {
+        right: initial;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
