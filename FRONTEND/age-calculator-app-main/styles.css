@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,700;1,800&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --f-size: clamp(16px, 16px + 1vw, 32px);
+    --clr-purple: hsl(259, 100%, 65%);
+    --clr-light-red: hsl(0, 100%, 67%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-off-white: hsl(0, 0%, 94%);
+    --clr-light-grey: hsl(0, 0%, 86%);
+    --clr-smokey: hsl(0, 1%, 44%);
+    --clr-off-black: hsl(0, 0%, 8%);
+    --f-weight-400: 400;
+    --f-weight-700: 700;
+    --f-weight-800: 800;
+}
+
+html {
+    font-size: var(--f-size);
+    /* font-size: 16px; */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--clr-light-grey);
+    color: var(--clr-off-black);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-size: 1rem;
+    font-weight: var(--f-weight-700);
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--clr-light-grey);
+    background-color: var(--clr-off-white);
+}
+
+
+/* || MAIN FORM */
+main {
+    background-color: var(--clr-off-white);
+    padding-inline: 1.2rem;
+    padding-block: 1.8rem;
+    width: 60vw;
+    min-width: 350px;
+    max-width: 700px;
+    border-radius: 30px 30px 120px 30px;
+    box-shadow: 2px 16px 16px hsl(0, 1%, 44%, 0.1);
+}
+
+form {
+    position: relative;
+}
+
+form .inputs{
+    display: flex;
+    gap: 0.8rem;
+}
+
+form .inputs div {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 150px;
+}
+
+form .inputs input {
+    display: block;
+    width: 100%;
+    padding-inline-start: 10px;
+    padding-block: 10px;
+}
+
+form .inputs input:focus {
+    border: 1px solid var(--clr-smokey);
+}
+
+form .inputs label {
+    font-size: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: var(--clr-smokey);
+}
+
+form button {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -98px;
+    width:75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: var(--clr-purple);
+    border: none;
+}
+
+span.error {
+    margin-top: 3px;
+    display: block;
+    font-size: 0.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.error.error {
+    color: var(--clr-light-red);
+}
+
+.error-border {
+    border: 1px solid var(--clr-light-red);
+}
+
+
+hr {
+    margin-block: 60px;
+    border: none;
+    background-color: var(--clr-light-grey);
+    height: 1.5px;
+}
+
+
+/* || MAIN RESULT */
+article div {
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: var(--f-weight-800);
+    line-height: 1.1;
+}
+
+
+article div span {
+    color: var(--clr-purple)
+}
