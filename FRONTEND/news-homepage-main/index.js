@@ -22,3 +22,11 @@ window.addEventListener("resize", function() {
     }
 })
 
+window.addEventListener("DOMContentLoaded", function() {
+    if (Number(window.innerWidth) > 750) {
+        nav.style.width = "auto"   
+    } else {
+        nav.style.width = "0"    
+    }
+})
+
