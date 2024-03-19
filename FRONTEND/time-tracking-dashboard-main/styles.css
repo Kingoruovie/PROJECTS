@@ -125,6 +125,11 @@ button {
     margin-bottom: .5rem;
 }
 
+.top img{
+    cursor: pointer;
+}
+
+
 h2 {
     font-size: 1rem;
     font-weight: var(--f-weight-500);

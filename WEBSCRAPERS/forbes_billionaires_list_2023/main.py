@@ -5,6 +5,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+
 
 import time
 import csv
@@ -26,7 +29,7 @@ path_to_file = Path(r'./forbes_billionaires_list_2023/data/billionaires_list.csv
 
 def scrape_url(url):
     global data
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     driver.maximize_window()
     driver.get(url)
     # driver.implicitly_wait(10)
