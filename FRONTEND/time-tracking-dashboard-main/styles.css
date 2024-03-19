@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --f-size: 18px;
+    --f-weight-300: 300;
+    --f-weight-400: 400;
+    --f-weight-500: 500;
+    --clr-blue: hsl(246, 80%, 60%);
+    --clr-light-red-1: hsl(15, 100%, 70%);
+    --clr-soft-blue: hsl(195, 74%, 62%);
+    --clr-light-red-2: hsl(348, 100%, 68%);
+    --clr-lime-green: hsl(145, 58%, 55%);
+    --clr-violet: hsl(264, 64%, 52%);
+    --clr-soft-orange: hsl(43, 84%, 65%);
+    --clr-very-dark-blue: hsl(226, 43%, 10%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
+    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-pale-blue: hsl(236, 100%, 87%);
+}
+
+html {
+    font-size: var(--f-size);
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color: var(--clr-very-dark-blue);
+    color: hsl(0, 0%, 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 4rem;
+}
+
+h1, h2, h3, p {
+    line-height: 1;
+}
+
+.small {
+    font-size: 0.8rem;
+    font-weight: var(--f-weight-300);
+    color: var(--clr-pale-blue);
+}
+
+main {
+    width: 90vw;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+}
+
+
+.profile-header {
+    background-color: var(--clr-dark-blue);
+    border-radius: 15px;
+}
+
+.profile-header img {
+    width: 65px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+
+.header {
+    padding: 1.5rem;
+    background-color: var(--clr-blue);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 15px;
+}
+
+.header h1 {
+    font-size: clamp(1.5rem, 1rem + 1.5vw, 3rem);
+    font-weight: var(--f-weight-300);
+    margin-top: 0.3rem;
+}
+
+.buttons {
+    margin: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: inherit;
+    color: var(--clr-pale-blue);
+    font-weight: var(--f-weight-300);
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.active {
+    color: hsl(0, 0%, 100%)
+}
+
+.detail {
+    border-radius: 18px;
+    background-repeat: no-repeat;
+    background-position: top -0.3rem right 1rem;
+}
+
+
+.detail .detail-body {
+    margin-top: 2.3rem;
+    background-color: var(--clr-dark-blue);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: var(--f-weight-500);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-pale-blue)
+}
+
+h3 {
+    color: hsl(0, 0%, 100%);
+    font-size: clamp(1.5rem, 1rem + 2vw, 3.5rem);
+    font-weight: var(--f-weight-300);
+}
+
+article:nth-child(2) {
+    background-color: var(--clr-light-red-1);
+    background-image: url("images/icon-work.svg");
+}
+
+
+article:nth-child(3) {
+    background-color: var(--clr-soft-blue);
+    background-image: url("images/icon-play.svg");
+}
+
+article:nth-child(4) {
+    background-color: var(--clr-light-red-2);
+    background-image: url("images/icon-study.svg");
+}
+
+article:nth-child(5) {
+    background-color: var(--clr-lime-green);
+    background-image: url("images/icon-exercise.svg");
+}
+
+article:nth-child(6) {
+    background-color: var(--clr-violet);
+    background-image: url("images/icon-social.svg");
+}
+
+article:nth-child(7) {
+    background-color: var(--clr-soft-orange);
+    background-image: url("images/icon-self-care.svg");
+}
+
+
+@media screen and (min-width: 600px) {
+    h1 {
+        line-height: 1.2;
+    }
+
+    main {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        max-width: 1000px;
+    }
+
+    .profile-header {
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-block: 1.5rem;
+        flex-grow: 3;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-grow: 4;
+    }
+
+    .top {
+        margin-bottom: 1rem;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+}
