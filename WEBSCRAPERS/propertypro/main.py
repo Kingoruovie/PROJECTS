@@ -8,10 +8,10 @@ import pprint
 import sys
 
 
-base_url = "https://www.propertypro.ng/property-for-sale?page="
+base_url = "https://www.propertypro.ng/property-for-short-let?page="
 first_page = 0
-last_page = 768
-path_to_file = Path("./propertypro/data/properties_for_sale.csv")
+last_page = 61
+path_to_file = Path("./propertypro/data/properties_for_short_let.csv")
 
 def save_to_file(data):
     with open(file=path_to_file, mode="a", encoding="UTF-8", newline="\n") as file:
@@ -48,7 +48,7 @@ scrape_page(base_url + "0")
 
 if __name__ == "__main__":
     for page in range(first_page, last_page + 1):
-        returned_data = scrape_page(base_url + page)
+        returned_data = scrape_page(base_url + str(page))
         save_to_file(returned_data)
         sys.stdout.write("\r")
         sys.stdout.write(" " * 50)
