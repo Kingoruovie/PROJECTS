@@ -65,3 +65,7 @@
 .active-radio {
   @apply border-2 border-cyan;
 }
+
+.color-cyan { 
+  @apply text-cyan;
+}
