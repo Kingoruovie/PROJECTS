@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radio {
+    @apply
+    appearance-none 
+    border 
+    border-gray-300 
+    h-6 w-6 
+    rounded-full 
+    relative
+    before:transition-opacity
+    before:duration-300
+    before:ease-in-out
+    before:content-['_'] 
+    before:absolute 
+    before:invisible
+    before:opacity-0
+    checked:before:visible
+    checked:before:opacity-100
+    before:top-1/2 
+    before:left-1/2 
+    before:-translate-x-[52%]
+    before:-translate-y-[52%]
+    before:h-3 
+    before:w-3 
+    before:rounded-full 
+  before:bg-cyan;
+}
+
+
+.nav-ul {
+  @apply 
+  z-20 
+  font-semibold 
+  w-[340px] 
+  md:w-max 
+  rounded-md 
+  md:rounded-none 
+  absolute top-12 
+  left-[50%] 
+  -translate-x-1/2 
+  md:static 
+  md:translate-x-0
+  flex 
+  flex-col 
+  h-0 
+  overflow-hidden 
+  md:h-auto 
+  md:flex-row 
+  md:text-white 
+  md:gap-8 
+  bg-white 
+  text-gray-900 
+  md:bg-transparent 
+  transition-height 
+  duration-300 
+  ease-in-out 
+  shadow-lg 
+  md:shadow-none;
+}
+
+.active-radio {
+  @apply border-2 border-cyan;
+}
