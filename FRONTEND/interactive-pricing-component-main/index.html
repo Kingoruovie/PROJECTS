@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="text-[15px] bg-bg-pattern bg-no-repeat bg-cover bg-[center_top_-20vh] font-body text-grayishBlue">
+  <header class="bg-pattern-circles bg-no-repeat py-14 bg-center my-10 text-center">
+    <h1 class="text-[1.2rem] sm:text-3xl font-extrabold text-darkDesaturatedBlue mb-2">Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. <br class="block sm:hidden">No credit card required.</p>
+  </header>
+  
+  <main class="w-[90%] max-w-[600px] bg-white rounded-lg mx-auto shadow-md py-8 sm:pt-14 sm:pb-10">
+    <div class="px-6 sm:px-12">
+      <div class="text-center grid grid-rows-3 sm:grid-rows-2 gap-5 sm:grid-cols-2 sm:items-center sm:gap-8">
+        <p class="uppercase font-semibold sm:col-start-1 sm:col-end-2 sm:tracking-widest sm:text-base sm:justify-self-start">
+          100k Pageviews
+        </p>
+        <input type="range" name="payment" id="payment" value="50" min="25" max="100" class="sm:col-span-2 appearance-none h-2 w-full rounded-full">
+        <div class="flex items-center gap-2 mx-auto sm:col-start-2 sm:col-end-3 sm:row-start-1 sm:row-end-2 sm:justify-self-end">
+          <span class="text-3xl sm:text-5xl font-extrabold text-darkDesaturatedBlue">$16.00</span>
+          <span class="sm:text-base">/ month</span>
+        </div>
+      </div>
+  
+      <div class="w-max mx-auto flex items-center gap-3 relative text-sm mb-8 mt-10 sm:mb-10">
+        <label for="radio">Monthly Billing</label>
+        <input type="checkbox" name="radio" id="radio" value="false" class="appearance-none w-12 h-6 rounded-full bg-lightGrayishBlueToggle relative before:absolute before:top-1 before:left-1 before:content-['_'] before:w-4 before:h-4 before:bg-white before:rounded-full before:transition-transform duration-300 ease-in-out checked:before:translate-x-6 hover:bg-softCyan active:bg-strongCyan cursor-pointer">
+        <label for="radio" class="mr-8">Yearly Billing</label>
+
+        <div class="text-lightRed bg-lightGrayishRed rounded-full py-[2px] px-2 w-max text-xs font-semibold absolute -right-5 sm:-right-24">
+          <span>
+            -25%
+          </span>
+          <span class="sm:inline-block hidden">
+            discount
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="mt-6 sm:m-10 px-6 sm:px-12 flex flex-col sm:flex-row items-center sm:justify-between gap-8">
+      <ul class="flex flex-col items-center sm:items-start gap-2">
+        <li class="list-image-[url(images/icon-check.svg)] list-outside pl-3">Unlimited websites</li>
+        <li class="list-image-[url(images/icon-check.svg)] list-outside pl-3">100% data ownership</li>
+        <li class="list-image-[url(images/icon-check.svg)] list-outside pl-3">Email reports</li>
+      </ul>
+      <button type="button" class="bg-darkDesaturatedBlue text-paleBlue font-semibold px-12 py-3 rounded-full">Start my trial</button>
+    </div>
+  </main>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
