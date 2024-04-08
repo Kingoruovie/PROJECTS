@@ -861,6 +861,8 @@ input[type="range"]::-webkit-slider-thumb{
   height: 2.5rem;
   width: 2.5rem;
   cursor: grab;
+  -webkit-appearance: none;
+          appearance: none;
   border-radius: 9999px;
   border-width: 0px;
   --tw-bg-opacity: 1;
