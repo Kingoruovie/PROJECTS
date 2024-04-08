@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="font-alata text-gray-600">
+  <header class="bg-mobile sm:bg-desktop h-[600px] lg:h-[700px] bg-center bg-cover">
+    <div class="container mx-auto px-6">
+
+      <!-- Top Nav -->
+      <div class="flex items-center justify-between pt-10 md:pt-12">
+        <!-- Logo -->
+        <div>
+          <img src="images/logo.svg" alt="">
+        </div>
+  
+        <!-- Hamburger -->
+        <button class="block md:hidden">
+          <img src="images/icon-hamburger.svg" alt="">
+        </button>
+  
+        <!-- nav  -->
+        <nav class="fixed z-20 hidden md:block grid-rows-[auto_1fr] inset-0 bg-black  md:static px-6 pt-10 md:pt-0 md:px-0 md:bg-transparent">
+          <div class="flex items-center justify-between md:hidden">
+            <img src="images/logo.svg" alt="">
+            <button>
+              <img src="images/icon-close.svg" alt="">
+            </button>
+          </div>
+          <ul class="uppercase md:capitalize font-josefin-sans text-2xl text-white flex flex-col md:flex-row md:text-lg md:font-alata md:gap-8 justify-center gap-5">
+            <li><a href="#" class="li-a">About</a></li>
+            <li><a href="#" class="li-a">Careers</a></li>
+            <li><a href="#" class="li-a">Events</a></li>
+            <li><a href="#" class="li-a">Products</a></li>
+            <li><a href="#" class="li-a">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <!-- Head -->
+      <h1 class="w-[90%] max-w-[800px] text-4xl md:text-5xl lg:text-8xl text-gray-100 font-josefin-sans uppercase border-2 border-gray-100 p-6 mt-40 lg:mt-28">
+        Immersive experiences that deliver
+      </h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container mx-auto px-6">
+      <!-- Descriptin -->
+      <section class="my-20 relative md:my-36">
+        <picture>
+          <source media="(min-width: 770px)" srcset="images/desktop/image-interactive.jpg">
+          <img src="images/mobile/image-interactive.jpg" alt="A man in VR" loading="lazy">
+        </picture>
+        <article class="bg-white text-center md:text-left lg:absolute lg:-bottom-14 lg:right-0 lg:w-[55%] lg:p-20">
+          <h2 class="uppercase font-josefin-sans text-gray-800 text-4xl lg:text-5xl pt-11 lg:pt-0 pb-4">The leader in interactive vr</h2>
+          <p class="leading-7 tracking-wide">
+            Founded in 2011, Loopstudios has been producing world-class virtual reality 
+            projects for some of the best companies around the globe. Our award-winning 
+            creations have transformed businesses through digital experiences that bind 
+            to their brand.
+          </p>
+        </article>
+      </section>
+
+      <!-- Grid display -->
+      <section class="mb-24 md:mb-40">
+        <div class="flex justify-center md:justify-between mb-12 md:mb-16">
+          <h3 class="text-4xl md:text-5xl font-josefin-sans uppercase text-gray-800">Our creations</h3>
+          <button class="hidden md:block uppercase border-2 border-black px-12 text-black transition duration-200 ease-in-out hover:text-white hover:bg-black tracking-widest">See All</button>
+        </div>
+
+        <div class="flex flex-col gap-6 md:flex-row md:flex-wrap justify-center">
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-deep-earth.jpg">
+              <img src="images/mobile/image-deep-earth.jpg" alt="Earth" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">Deep <br>earth</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-night-arcade.jpg">
+              <img src="images/mobile/image-night-arcade.jpg" alt="Arcade" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">Night <br>arcade</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-soccer-team.jpg">
+              <img src="images/mobile/image-soccer-team.jpg" alt="Soccer" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">Soccer <br>team vr</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-grid.jpg">
+              <img src="images/mobile/image-grid.jpg" alt="Grid" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">The <br>grid</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-from-above.jpg">
+              <img src="images/mobile/image-from-above.jpg" alt="VR" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">From up <br>above vr</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-pocket-borealis.jpg">
+              <img src="images/mobile/image-pocket-borealis.jpg" alt="Borealis" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">Pocket <br>Borealis</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-curiosity.jpg">
+              <img src="images/mobile/image-curiosity.jpg" alt="Curiosity" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">The <br>Curiosity</h4>
+          </article>
+          <article class="relative font-josefin-sans text-2xl md:text-4xl text-white flex-grow">
+            <picture>
+              <source media="(min-width: 770px)" srcset="images/desktop/image-fisheye.jpg">
+              <img src="images/mobile/image-fisheye.jpg" alt="Fisheye" loading="lazy" class="w-full h-auto object-cover">
+            </picture>
+            <h4 class="article-h4">Make it <br>fisheye</h4>
+          </article>
+        </div>
+
+        <button type="button" class="block md:hidden  uppercase border-2 border-black px-12 py-3 mt-5 mx-auto text-black transition duration-200 ease-in-out hover:text-white hover:bg-black tracking-widest">See All</button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-black">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center md:justify-between py-12 md:items-center">
+      <div>
+        <img src="images/logo.svg" alt="">
+        <nav class="md:mt-6 text-white">
+          <ul class="flex flex-col items-center md:items-start gap-4 md:flex-row md:gap-6 my-10 md:my-0">
+            <li><a href="#" class="li-a">About</a></li>
+            <li><a href="#" class="li-a">Careers</a></li>
+            <li><a href="#" class="li-a">Events</a></li>
+            <li><a href="#" class="li-a">Products</a></li>
+            <li><a href="#" class="li-a">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <div class="flex flex-col md:items-end items-center gap-5 md:gap-0">
+        <div class="flex gap-3">
+          <a href="#" class="footer-icon"><img src="images/icon-facebook.svg" alt=""></a>
+          <a href="#" class="footer-icon"><img src="images/icon-twitter.svg" alt=""></a>
+          <a href="#" class="footer-icon"><img src="images/icon-pinterest.svg" alt=""></a>
+          <a href="#" class="footer-icon"><img src="images/icon-instagram.svg" alt=""></a>
+        </div>
+        <p class="md:mt-6">© 2024 Loopstudios. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>. -->
+  </div>
+</body>
+</html>
