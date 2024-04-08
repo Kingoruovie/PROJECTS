@@ -6,9 +6,9 @@
 
 
 input[type="range"]::-webkit-slider-thumb {
-    @apply h-10 w-10 bg-icon-slider bg-no-repeat bg-center bg-softCyan hover:bg-strongCyan active:bg-strongCyan border-0 rounded-full cursor-grab active:cursor-grabbing;
+    @apply h-10 w-10 bg-icon-slider bg-no-repeat bg-center bg-softCyan hover:bg-strongCyan active:bg-strongCyan border-0 rounded-full cursor-grab active:cursor-grabbing shadow-softCyan shadow-lg;
 }
 
 input[type="range"]::-moz-range-thumb {
-    @apply h-10 w-10 bg-icon-slider bg-no-repeat bg-center bg-softCyan hover:bg-strongCyan active:bg-strongCyan border-0 rounded-full cursor-grab active:cursor-grabbing;
+    @apply h-10 w-10 bg-icon-slider bg-no-repeat bg-center bg-transparent bg-softCyan hover:bg-strongCyan active:bg-strongCyan border-0 rounded-full cursor-grab active:cursor-grabbing shadow-softCyan shadow-lg;
 }

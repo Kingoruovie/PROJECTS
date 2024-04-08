@@ -689,14 +689,6 @@ video {
   gap: 2rem;
 }
 
-.justify-self-start{
-  justify-self: start;
-}
-
-.justify-self-end{
-  justify-self: end;
-}
-
 .rounded-full{
   border-radius: 9999px;
 }
@@ -720,11 +712,6 @@ video {
   background-color: hsl(14 92% 95% / var(--tw-bg-opacity));
 }
 
-.bg-softCyan{
-  --tw-bg-opacity: 1;
-  background-color: hsl(174 77% 80% / var(--tw-bg-opacity));
-}
-
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -736,28 +723,6 @@ video {
 
 .bg-pattern-circles{
   background-image: url('images/pattern-circles.svg');
-}
-
-.bg-gradient-to-r{
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.from-softCyan{
-  --tw-gradient-from: hsl(174, 77%, 80%) var(--tw-gradient-from-position);
-  --tw-gradient-to: hsl(174 77% 80% / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-50\%{
-  --tw-gradient-from-position: 50%;
-}
-
-.to-lightGrayishBlueEmpty{
-  --tw-gradient-to: hsl(224, 65%, 95%) var(--tw-gradient-to-position);
-}
-
-.to-50\%{
-  --tw-gradient-to-position: 50%;
 }
 
 .bg-cover{
@@ -903,6 +868,11 @@ input[type="range"]::-webkit-slider-thumb{
   background-image: url('images/icon-slider.svg');
   background-position: center;
   background-repeat: no-repeat;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: hsl(174, 77%, 80%);
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 input[type="range"]::-webkit-slider-thumb:hover{
@@ -922,11 +892,17 @@ input[type="range"]::-moz-range-thumb{
   cursor: grab;
   border-radius: 9999px;
   border-width: 0px;
+  background-color: transparent;
   --tw-bg-opacity: 1;
   background-color: hsl(174 77% 80% / var(--tw-bg-opacity));
   background-image: url('images/icon-slider.svg');
   background-position: center;
   background-repeat: no-repeat;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: hsl(174, 77%, 80%);
+  --tw-shadow: var(--tw-shadow-colored);
 }
 
 input[type="range"]::-moz-range-thumb:hover{
