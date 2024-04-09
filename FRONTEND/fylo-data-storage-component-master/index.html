@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="font-body text-[14px]">
+  <main class="flex justify-center items-center bg-mobile md:bg-desktop md:bg-bottom bg-center bg-cover md:bg-contain bg-no-repeat min-h-[100vh] bg-veryDarkBlue">
+    <div class="w-full max-w-[1000px] flex flex-col lg:flex-row gap-5 lg:gap-8 items-center lg:items-end">
+      <article class="bg-darkBlue rounded-[12px_100px_12px_12px] p-10 w-[90%] sm:w-[350px]">
+        <!-- Logo -->
+        <div class="mb-8">
+          <img src="images/logo.svg" alt="">
+        </div>
+        <!-- Other Images -->
+        <div class="flex gap-4 items-center">
+          <div class="h-11 w-11 flex items-center justify-center rounded-md bg-veryDarkBlue">
+            <img src="images/icon-document.svg" alt="" >
+          </div>
+          <div class="h-11 w-11 flex items-center justify-center rounded-md bg-veryDarkBlue">
+            <img src="images/icon-folder.svg" alt="" >
+          </div>
+          <div class="h-11 w-11 flex items-center justify-center rounded-md bg-veryDarkBlue">
+            <img src="images/icon-upload.svg" alt="" >
+          </div>
+          
+        </div>
+      </article>
+
+      <article class="bg-darkBlue rounded-lg p-8 w-[90%] sm:w-[600px] text-paleBlue text-center text-sm relative pb-14 lg:pb-8">
+        <h1>
+          You&apos;ve used <b>815 GB</b> of you storage
+        </h1>
+        <!-- Storage Visual -->
+        <div class="my-3 h-5 leading-none w-full bg-veryDarkBlue bg-opacity-50 rounded-full p-[2px]">
+          <div class="h-full w-[75%] bg-gradient-to-r from-gradientFrom to-gradientTo rounded-full p-[2px]">
+             <span class="h-full aspect-square bg-white rounded-full ml-auto block"></span>
+          </div>
+        </div>
+        <div class="flex justify-between font-semibold">
+          <span>0 GB</span><span>1000 GB</span>
+        </div>
+
+        <!-- Left Over Space -->
+        <div id="chat" class="flex items-center gap-3 absolute right-1/2 translate-x-1/2 -bottom-10 lg:right-8 lg:bottom-[unset] lg:-top-14 lg:translate-x-0 bg-white text-veryDarkBlue px-6 py-4 rounded-lg lg:after:content-['_'] lg:after:w-7 lg:after:h-7 lg:after:absolute lg:after:bg-white lg:after:-bottom-5 lg:after:right-0">
+          <span class="text-5xl font-bold">185</span>
+          <span class="uppercase text-grayishBlue font-semibold w-max">GB Left</span>
+        </div>
+      </article>
+    </div>
+  </main>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
