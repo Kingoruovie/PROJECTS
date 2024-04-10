@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js" defer></script>
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="text-light-text-dark-grayish-blue dark:text-dark-text-desaturated-blue text-[14px] font-body bg-white dark:bg-dark-bg-very-dark-blue before:content-['_'] before:fixed before:h-1/3 before:w-full before:bg-light-top-bg-very-pale-blue before:-z-10 before:rounded-[0_0_20px_20px] dark:before:bg-dark-top-bg-very-dark-blue">
+  <header class="pt-8">
+    <div class="px-6 container mx-auto md:flex md:justify-between">
+      <!-- Head -->
+      <div class="font-bold pb-4">
+        <h1 class="text-2xl md:text-3xl font-bold text-light-text-very-dark-blue dark:text-white">Social Media Dashboard</h1>
+        <p class="text-light-text-dark-grayish-blue dark:text-dark-text-desaturated-blue">Total Followers: 23,004</p>
+      </div>
+
+      <!-- Toggle -->
+      <div class="flex justify-between items-center md:justify-start md:gap-5 pt-4 md:pt-0 border-t md:border-t-0 border-gray-500 dark:border-dark-text-desaturated-blue">
+        <p class="font-bold">Dark Mode</p>
+        <input type="checkbox" name="toggle" id="toggle" class="appearance-none relative w-12 h-6 bg-light-toggle dark:bg-gradient-to-r dark:from-dark-toggle-from dark:to-dark-toggle-to rounded-full after:content-['_'] after:absolute after:top-1/2 after:-translate-y-1/2 after:left-[2px] after:size-5 after:bg-white dark:after:bg-dark-top-bg-very-dark-blue after:rounded-full aafter:transition after:duration-300 after:ease-in-out checked:after:translate-x-[calc(100%_+_4px)]  hover:bg-gradient-to-r hover:from-dark-toggle-from hover:to-dark-toggle-to cursor-pointer">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container mx-auto px-6">
+      <!-- Followers and Subscribers -->
+      <section id="followers" class="mt-10 grid gap-6 md:gap-9 md:grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))]">
+        <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] border-t-[4px] border-facebook flex flex-col items-center text-center py-8 gap-6">
+          <div class="flex gap-2 items-center font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#178FF5" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
+            <span>@nathanf</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-6xl mb-1 text-light-text-very-dark-blue dark:text-white">1987</h2>
+            <p class="uppercase tracking-[7px]">Followers</p>
+          </div>
+          <div class="flex items-center gap-2 font-bold text-lime-green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+            <span>12 Today</span>
+          </div>
+        </article>
+        <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] border-t-[4px] border-twitter flex flex-col items-center text-center py-8 gap-6">
+          <div class="flex gap-2 items-center font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+              <path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path>
+              </svg>
+            <span>@nathanf</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-6xl mb-1 text-light-text-very-dark-blue dark:text-white">1044</h2>
+            <p class="uppercase tracking-[7px]">Followers</p>
+          </div>
+          <div class="flex items-center gap-2 font-bold text-lime-green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+            <span>99 Today</span>
+          </div>
+        </article>
+        <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] flex flex-col items-center text-center pt-9 pb-8 gap-6">
+          <div class="flex gap-2 items-center font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#DF4896"/><stop offset="50.913%" stop-color="#EE877E"/><stop offset="100%" stop-color="#FDC366"/></linearGradient></defs><path fill="url(#a)" d="M10 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 0C7.284 0 6.944.012 5.878.06 2.246.227.228 2.242.06 5.877.01 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.816-5.817.05-1.066.061-1.407.061-4.123s-.012-3.056-.06-4.122C19.777 2.249 17.76.228 14.124.06 13.057.01 12.716 0 10 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+            <span>@realnathanf</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-6xl mb-1 text-light-text-very-dark-blue dark:text-white">11k</h2>
+            <p class="uppercase tracking-[7px]">Followers</p>
+          </div>
+          <div class="flex items-center gap-2 font-bold text-lime-green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+            <span>1099 Today</span>
+          </div>
+        </article>
+        <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] border-t-[4px] border-youtube flex flex-col items-center text-center py-8 gap-6">
+          <div class="flex gap-2 items-center font-bold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#C4032B" d="M10 0C4.478 0 0 4.478 0 10c0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.7 14.077c-1.75.12-5.652.12-7.402 0-1.896-.13-2.117-1.059-2.131-4.077.014-3.024.237-3.947 2.131-4.077 1.75-.12 5.652-.12 7.403 0 1.897.13 2.117 1.059 2.132 4.077-.015 3.024-.237 3.947-2.132 4.077zM8.334 8.048l4.098 1.949-4.098 1.955V8.048z"/></svg>
+            <span>@Nathan F.</span>
+          </div>
+          <div>
+            <h2 class="font-bold text-6xl mb-1 text-light-text-very-dark-blue dark:text-white">8239</h2>
+            <p class="uppercase tracking-[7px]">Subscribers</p>
+          </div>
+          <div class="flex items-center gap-2 font-bold text-bright-red">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z"/></svg>
+            <span>144 Today</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Today Overviews -->
+      <section id="today-overview" class="mt-10 mb-10">
+        
+        <h2 class="font-bold text-2xl mb-6 dark:text-white">Overview - Today</h2>
+        
+        <div class="grid gap-4 md:gap-9 md:grid-cols-[repeat(auto-fit,_minmax(280px,_1fr))]">
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Page Views</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#178FF5" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">87</h3>
+              <div class="flex items-center gap-1 font-bold text-lime-green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+                <span>3%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Likes</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#178FF5" d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z"/></svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">52</h3>
+              <div class="flex items-center gap-1 font-bold text-bright-red">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z"/></svg>
+                <span>2%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Likes</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#DF4896"/><stop offset="50.913%" stop-color="#EE877E"/><stop offset="100%" stop-color="#FDC366"/></linearGradient></defs><path fill="url(#a)" d="M10 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 0C7.284 0 6.944.012 5.878.06 2.246.227.228 2.242.06 5.877.01 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.816-5.817.05-1.066.061-1.407.061-4.123s-.012-3.056-.06-4.122C19.777 2.249 17.76.228 14.124.06 13.057.01 12.716 0 10 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">5462</h3>
+              <div class="flex items-center gap-1 font-bold text-lime-green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+                <span>2257%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Profile Views</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><defs><linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%"><stop offset="0%" stop-color="#DF4896"/><stop offset="50.913%" stop-color="#EE877E"/><stop offset="100%" stop-color="#FDC366"/></linearGradient></defs><path fill="url(#a)" d="M10 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.975 1.409 4.099 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.057 4.042-.124 2.687-1.387 3.975-4.1 4.099-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-2.717-.124-3.977-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zM10 0C7.284 0 6.944.012 5.878.06 2.246.227.228 2.242.06 5.877.01 6.944 0 7.284 0 10s.012 3.057.06 4.123c.167 3.632 2.182 5.65 5.817 5.817 1.067.048 1.407.06 4.123.06s3.057-.012 4.123-.06c3.629-.167 5.652-2.182 5.816-5.817.05-1.066.061-1.407.061-4.123s-.012-3.056-.06-4.122C19.777 2.249 17.76.228 14.124.06 13.057.01 12.716 0 10 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">52k</h3>
+              <div class="flex items-center gap-1 font-bold text-lime-green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+                <span>1375%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Retweets</span>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+                <path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path>
+                </svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">117</h3>
+              <div class="flex items-center gap-1 font-bold text-lime-green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+                <span>303%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Likes</span>
+              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48">
+                <path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"></path>
+                </svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">507</h3>
+              <div class="flex items-center gap-1 font-bold text-lime-green">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#1EB589" fill-rule="evenodd" d="M0 4l4-4 4 4z"/></svg>
+                <span>553%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Likes</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#C4032B" d="M10 0C4.478 0 0 4.478 0 10c0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.7 14.077c-1.75.12-5.652.12-7.402 0-1.896-.13-2.117-1.059-2.131-4.077.014-3.024.237-3.947 2.131-4.077 1.75-.12 5.652-.12 7.403 0 1.897.13 2.117 1.059 2.132 4.077-.015 3.024-.237 3.947-2.132 4.077zM8.334 8.048l4.098 1.949-4.098 1.955V8.048z"/></svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">107</h3>
+              <div class="flex items-center gap-1 font-bold text-bright-red">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z"/></svg>
+                <span>19%</span>
+              </div>
+            </div>
+          </article>
+          <article class="bg-light-card-light-grayish-blue dark:bg-dark-card-dark-desaturated-blue rounded-[4px] p-5">
+            <div class="font-bold flex justify-between items-center mb-5">
+              <span>Total Views</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#C4032B" d="M10 0C4.478 0 0 4.478 0 10c0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.7 14.077c-1.75.12-5.652.12-7.402 0-1.896-.13-2.117-1.059-2.131-4.077.014-3.024.237-3.947 2.131-4.077 1.75-.12 5.652-.12 7.403 0 1.897.13 2.117 1.059 2.132 4.077-.015 3.024-.237 3.947-2.132 4.077zM8.334 8.048l4.098 1.949-4.098 1.955V8.048z"/></svg>
+            </div>
+            <div class="flex items-end justify-between">
+              <h3 class="font-bold text-4xl text-light-text-very-dark-blue dark:text-white">1407</h3>
+              <div class="flex items-center gap-1 font-bold text-bright-red">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="4"><path fill="#DC414C" fill-rule="evenodd" d="M0 0l4 4 4-4z"/></svg>
+                <span>12%</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Oru Ovie</a>.
+  </div>
+</body>
+</html>
