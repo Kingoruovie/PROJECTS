@@ -8,10 +8,10 @@ import pprint
 import sys
 
 
-base_url = "https://www.propertypro.ng/property-for-short-let?page="
+base_url = "https://www.propertypro.ng/property-for-sale?page="
 first_page = 0
-last_page = 61
-path_to_file = Path("./propertypro/data/properties_for_short_let.csv")
+last_page = 763
+path_to_file = Path("./propertypro/data/properties_for_sale.csv")
 
 def save_to_file(data):
     with open(file=path_to_file, mode="a", encoding="UTF-8", newline="\n") as file:
@@ -24,14 +24,14 @@ def scrape_page(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
     
-    house_listings = soup.select("div.single-room-sale.listings-property")
+    house_listings = soup.select("div.property-listing")
     for house_listing in house_listings:
-        name = house_listing.select_one("div.single-room-text > a").text
-        location = house_listing.select_one("div.single-room-text > h4").text
-        price = house_listing.select_one("div.single-room-text > div.n50 h3").text
-        date_added = house_listing.select_one("div.single-room-text > h5").text
-        tags = ",".join([tag.strip() for tag in house_listing.select_one("div.single-room-text > .furnished-btn").text.split("\n")])
-        furnished_area = " ".join([fur_area.strip() for fur_area in house_listing.select_one("div.single-room-text > .fur-areea").text.split("\n")])
+        name = house_listing.select_one(".pl-title h3 a").text
+        location = house_listing.select_one(".pl-title p").text
+        price = house_listing.select_one(".pl-price h3").text
+        date_added = house_listing.select_one("div.property-listing-content > p").text
+        tags = ",".join([tag.text.strip() for tag in house_listing.select(".pl-badge-grid > .pl-badge-left ul > li")])
+        furnished_area = " ".join([fur_area.strip() for fur_area in house_listing.select_one(".pl-price h6").text.split(" ")])
         data.append([
             name,
             location,
@@ -54,4 +54,3 @@ if __name__ == "__main__":
         sys.stdout.write(" " * 50)
         sys.stdout.write("\r")
         print(f"Page {page + 1} done", end="", flush=True)
-        
