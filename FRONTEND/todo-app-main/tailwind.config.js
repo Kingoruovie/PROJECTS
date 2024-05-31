@@ -10,13 +10,13 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'bg-desktop-dark': "url('src/assets/bg-desktop-dark.jpg')",
-        'bg-desktop-light': "url('src/assets/bg-desktop-light.jpg')",
-        'bg-mobile-dark': "url('src/assets/bg-mobile-dark.jpg')",
-        'bg-mobile-light': "url('src/assets/bg-mobile-light.jpg')",
+        'bg-desktop-dark': "url('/src/assets/bg-desktop-dark.jpg')",
+        'bg-desktop-light': "url('/src/assets/bg-desktop-light.jpg')",
+        'bg-mobile-dark': "url('/src/assets/bg-mobile-dark.jpg')",
+        'bg-mobile-light': "url('/src/assets/bg-mobile-light.jpg')",
       },
       content: {
-        'link': 'url("./src/assets/icon-check.svg")'
+        'link': 'url("/src/assets/icon-check.svg")'
       },
       colors: {
         'bright-blue': "hsl(220, 98%, 61%)",
