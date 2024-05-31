@@ -9,7 +9,7 @@ import sys
 
 
 base_url = "https://www.propertypro.ng/property-for-sale?page="
-first_page = 0
+first_page = 114
 last_page = 763
 path_to_file = Path("./propertypro/data/properties_for_sale.csv")
 

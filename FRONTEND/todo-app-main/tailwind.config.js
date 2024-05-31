@@ -15,6 +15,9 @@ export default {
         'bg-mobile-dark': "url('./src/assets/bg-mobile-dark.jpg')",
         'bg-mobile-light': "url('./src/assets/bg-mobile-light.jpg')",
       },
+      content: {
+        'link': 'url("./src/assets/icon-check.svg")'
+      },
       colors: {
         'bright-blue': "hsl(220, 98%, 61%)",
         // Linear-gradient
