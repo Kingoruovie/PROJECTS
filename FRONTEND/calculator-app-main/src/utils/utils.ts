@@ -2,6 +2,7 @@ const themeClasses: {[key: string] : {[key: string]: string}} = {
     'dark': {
       mainBg: 'bg-dark-bg-main',
       toggleBg: 'bg-dark-bg-toggle-keypad',
+      keypadBg: 'bg-dark-bg-toggle-keypad',
       screenBg: 'bg-dark-bg-screen',
       toggleBtn: 'bg-dark-key-bg-2-toggle',
       bgBtn1: 'bg-dark-key-bg-1',
@@ -16,6 +17,7 @@ const themeClasses: {[key: string] : {[key: string]: string}} = {
     'light': {
       mainBg: 'bg-light-bg-main',
       toggleBg: 'bg-light-bg-toggle-keypad',
+      keypadBg: 'bg-light-bg-toggle-keypad',
       screenBg: 'bg-light-bg-screen',
       toggleBtn: 'bg-light-key-bg-2-toggle',
       bgBtn1: 'bg-light-key-bg-1',
@@ -30,6 +32,7 @@ const themeClasses: {[key: string] : {[key: string]: string}} = {
     'custom': {
       mainBg: 'bg-custom-bg-main',
       toggleBg: 'bg-custom-bg-toggle-keypad',
+      keypadBg: 'bg-custom-bg-toggle-keypad',
       screenBg: 'bg-custom-bg-screen',
       toggleBtn: 'bg-custom-key-bg-2-toggle',
       bgBtn1: 'bg-custom-key-bg-1',

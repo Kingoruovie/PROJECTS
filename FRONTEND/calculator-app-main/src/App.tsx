@@ -2,10 +2,12 @@ import { useState } from "react"
 import themeClasses from "./utils/utils"
 
 import Header from "./components/Header"
+import Screen from "./components/Screen"
+import Keypad from "./components/Keypad"
 
 export default function App() {
   const [theme, setTheme] = useState('dark')
-  const [input, setInput] = useState('')
+  // const [input, setInput] = useState('')
 
   const changeTheme = (colorScheme: string) => {
     setTheme(colorScheme)
@@ -17,11 +19,9 @@ export default function App() {
         <section>
           <Header theme={theme} changeTheme={changeTheme}/>
         </section>
-        <section className="mt-10">
-            <input value={input} onChange={(event) => setInput(event.target.value)} type="number" name="" id="" className={`text-5xl w-full rounded-lg ${themeClasses[theme].screenBg}`}/>
-          <article>
-
-          </article>
+        <section className="mt-8">
+          <Screen theme={theme}/>
+          <Keypad theme={theme}/>
         </section>
       </div>
     </main>
