@@ -9,10 +9,10 @@ const themeClasses: {[key: string] : {[key: string]: string}} = {
       shadowBtn1: 'shadow-dark-1',
       bgBtn2: 'bg-dark-key-bg-2-toggle',
       shadowBtn2: 'shadow-dark-2',
-      bgBtn3: 'bg-dark-key-bg-3-toggle',
+      bgBtn3: 'bg-dark-key-bg-3',
       shadowBtn3: 'shadow-dark-3',
       textColor1: 'text-dark-text-color-1',
-      textColor2: 'text-dark-text-color-2'
+      textColor2: 'text-dark-text-color-2',
     },
     'light': {
       mainBg: 'bg-light-bg-main',
@@ -24,7 +24,7 @@ const themeClasses: {[key: string] : {[key: string]: string}} = {
       shadowBtn1: 'shadow-light-1',
       bgBtn2: 'bg-light-key-bg-2-toggle',
       shadowBtn2: 'shadow-light-2',
-      bgBtn3: 'bg-light-key-bg-3-toggle',
+      bgBtn3: 'bg-light-key-bg-3',
       shadowBtn3: 'shadow-light-3',
       textColor1: 'text-light-text-color-1',
       textColor2: 'text-light-text-color-2'
@@ -39,7 +39,7 @@ const themeClasses: {[key: string] : {[key: string]: string}} = {
       shadowBtn1: 'shadow-custom-1',
       bgBtn2: 'bg-custom-key-bg-2-toggle',
       shadowBtn2: 'shadow-custom-2',
-      bgBtn3: 'bg-custom-key-bg-3-toggle',
+      bgBtn3: 'bg-custom-key-bg-3',
       shadowBtn3: 'shadow-custom-3',
       textColor1: 'text-custom-text-color-1',
       textColor2: 'text-custom-text-color-2',

@@ -54,15 +54,15 @@ export default {
         display: ['League Spartan', ...defaultTheme.fontFamily.sans]
       },
       boxShadow: {
-        'dark-1': '0 8px 0 hsl(224, 28%, 35%)',
-        'dark-2': '0 8px 0 hsl(6, 70%, 34%)',
-        'dark-3': '0 8px 0 hsl(28, 16%, 65%)',
-        'light-1': '0 8px 0 hsl(185, 58%, 25%)',
-        'light-2': '0 8px 0 hsl(25, 99%, 27%)',
-        'light-3': '0 8px 0 hsl(35, 11%, 61%)',
-        'custom-1': '0 8px 0 hsl(285, 91%, 52%)',
-        'custom-2': '0 8px 0 hsl(177, 92%, 70%)',
-        'custom-3': '0 8px 0 hsl(290, 70%, 36%)'
+        'dark-1': '0 5px 0 hsl(224, 28%, 35%)',
+        'dark-2': '0 5px 0 hsl(6, 70%, 34%)',
+        'dark-3': '0 5px 0 hsl(28, 16%, 65%)',
+        'light-1': '0 5px 0 hsl(185, 58%, 25%)',
+        'light-2': '0 5px 0 hsl(25, 99%, 27%)',
+        'light-3': '0 5px 0 hsl(35, 11%, 61%)',
+        'custom-1': '0 5px 0 hsl(285, 91%, 52%)',
+        'custom-2': '0 5px 0 hsl(177, 92%, 70%)',
+        'custom-3': '0 5px 0 hsl(290, 70%, 36%)'
       }
     },
   },
