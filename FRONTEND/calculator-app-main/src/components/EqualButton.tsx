@@ -1,8 +1,14 @@
 import themeClasses from "../utils/utils"
 
+type EqualButtonType = {
+    value: string, 
+    theme: string,
+    handleEqual: () => void
+}
+
 export default function EqualButton(
-    {value, theme}: 
-    {value: string | number, theme: string}
+    {value, theme, handleEqual}: 
+    EqualButtonType
 ) {
     const baseStyle: string = `${themeClasses[theme].bgBtn2} ${themeClasses[theme].shadowBtn2} flex-grow basis-full rounded-md text-xl uppercase align-baseline py-4`
     function getTextColor(colorScheme: string): string {
@@ -16,6 +22,6 @@ export default function EqualButton(
     }
 
     return (
-        <button type="button" className={getTextColor(theme)}>{value}</button>
+        <button type="button" className={getTextColor(theme)} onClick={handleEqual}>{value}</button>
     )
 }

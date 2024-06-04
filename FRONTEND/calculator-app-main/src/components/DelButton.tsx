@@ -1,8 +1,8 @@
 import themeClasses from "../utils/utils"
 
 export default function DelButton(
-    {value, theme}: 
-    {value: string | number, theme: string}
+    {value, theme, handleDel}: 
+    {value: string | number, theme: string, handleDel: () => void}
 ) {
     const baseStyle: string = `${themeClasses[theme].bgBtn1} ${themeClasses[theme].shadowBtn1} flex-grow basis-full rounded-md text-xl uppercase align-baseline`
     function getTextColor(colorScheme: string): string {
@@ -15,6 +15,6 @@ export default function DelButton(
         }
     }
     return (
-        <button type="button" className={getTextColor(theme)}>{value}</button>
+        <button type="button" className={getTextColor(theme)} onClick={handleDel}>{value}</button>
     )
 }

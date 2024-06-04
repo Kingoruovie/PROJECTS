@@ -1,8 +1,14 @@
 import themeClasses from "../utils/utils"
 
-export default function Button(
-    {value, theme, handleKeys}: 
-    {value: string | number, theme: string, handleKeys: (value: string | number) => void}
+type OperationButtonType = {
+    value: string, 
+    theme: string, 
+    handleOperation: (operation: string) => void
+}
+
+export default function OperationButton(
+    {value, theme, handleOperation}: 
+    OperationButtonType
 ) {
     const baseStyle: string = `${themeClasses[theme].bgBtn3} ${themeClasses[theme].shadowBtn3} flex-grow basis-full py-3 rounded-md align-baseline`
     function getTextColor(colorScheme: string): string {
@@ -16,6 +22,6 @@ export default function Button(
     }
 
     return (
-        <button type="button" className={getTextColor(theme)} onClick={() => handleKeys(value)}>{value}</button>
+        <button type="button" className={getTextColor(theme)} onClick={() => handleOperation(value)}>{value}</button>
     )
 }
