@@ -12,15 +12,32 @@ export default function App() {
   const ref = useRef({
     previousValue: 0,
     nextValue: 0,
-    operation: ''
+    operation: '',
+    equalState: false
   })
+
+  const changeTheme = (colorScheme: string) => {
+    setTheme(colorScheme)
+  }
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault()
+    if (event.target.value === '-' || String(Number(event.target.value)) !== 'NaN') {
+      setInput(event.target.value)
+    }
+  }
 
   
   class Calculator {
     handleKeys (value: string | number) {
-      setInput(input + value)
-      ref.current.nextValue = Number(input + value)
-      console.log(ref.current)
+      if (!ref.current.equalState) {
+        setInput(input + value)
+        ref.current.nextValue = Number(input + value)
+      } else{
+        setInput(String(value))
+        ref.current.nextValue = Number(value)
+        ref.current.equalState =  false
+      }
     }
 
     handleDel () {
@@ -41,25 +58,33 @@ export default function App() {
     handleDecimal () {
       if (!input.includes('.')) {
         setInput(input + '.')
-        ref.current.previousValue = Number(input + '.')
+        ref.current.nextValue = Number(input + '.')
       }
     }
 
     handleEqual () {
+      ref.current.equalState = true
+      let maxDec = 0
+      if (String(ref.current.previousValue).includes('.') && String(ref.current.previousValue).includes('.')) {
+        maxDec = Math.max(String(ref.current.previousValue).split('.').length, String(ref.current.nextValue).split('.').length)
+      }
       let total: number = 0
       if (ref.current.operation === '+') {
-        total = ref.current.nextValue + ref.current.previousValue
+        total = ref.current.previousValue + ref.current.nextValue
       } else if (ref.current.operation === '-') {
-        total = ref.current.nextValue - ref.current.previousValue
+        total = ref.current.previousValue - ref.current.nextValue
       } else if (ref.current.operation === '×') {
-        total = ref.current.nextValue * ref.current.previousValue
+        total = ref.current.previousValue * ref.current.nextValue
       } else if (ref.current.operation === '/') {
-        try {
-          total = ref.current.nextValue / ref.current.previousValue
-        } catch (err) {
-          setInput('Err')
+        total = ref.current.previousValue / ref.current.nextValue
+        if (total === Infinity) {
+          setInput('Error')
           return
         }
+      }
+
+      if (maxDec !== 0) {
+        total = Number(total.toFixed(maxDec))
       }
       ref.current.previousValue = total
       ref.current.nextValue = 0
@@ -70,7 +95,6 @@ export default function App() {
     handleOperation (operation: string) {
       switch (operation) {
         case '+':
-          
           ref.current.previousValue = ref.current.nextValue
           ref.current.nextValue = 0
           ref.current.operation = operation
@@ -102,17 +126,6 @@ export default function App() {
     }
   }
   const calculator = new Calculator()
-
-  const changeTheme = (colorScheme: string) => {
-    setTheme(colorScheme)
-  }
-
-  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault()
-    if (event.target.value === '-' || String(Number(event.target.value)) !== 'NaN') {
-      setInput(event.target.value)
-    }
-  }
 
   return (
     <main className={`font-display min-h-[100vh] md:flex justify-center items-center ${themeClasses[theme].mainBg} ${themeClasses[theme].textColor1}`}>
