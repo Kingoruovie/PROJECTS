@@ -22,20 +22,49 @@ export default function App() {
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
-    if (event.target.value === '-' || String(Number(event.target.value)) !== 'NaN') {
-      setInput(event.target.value)
+    if (event.target.value === '-' || String(Number(event.target.value.split(',').join(''))) !== 'NaN') {
+      setInput(Calculator.handleDisplayRep(event.target.value))
+      ref.current.nextValue = Number(Calculator.handleNumberRep(event.target.value))
     }
   }
 
   
   class Calculator {
-    handleKeys (value: string | number) {
+    static handleDisplayRep (value: string): string {
+      value = value.split(',').join('')
+      let wholePart: string
+      let decimalPart: string = ''
+      if (value.includes('.')) {
+        [wholePart, decimalPart] = value.split('.') 
+      } else {
+        wholePart = value
+      }
+      let x: number = Number(wholePart)
+      let rep: string = ''
+      while (x >= 1000) {
+        const rem: string = x % 1000 === 0 ? '000': 
+          x % 1000 < 10 ? '00' + String(x % 1000) :
+          x % 1000 < 100 ? '0' + String(x % 1000) :
+          String(x % 1000)
+        x = Math.floor(x / 1000)
+        rep = ',' + rem + rep
+      }
+      rep = String(x) + rep + (decimalPart ? '.' + decimalPart: '')
+      return rep
+    }
+
+    static handleNumberRep (value: string): string {
+      return value.split(',').join('')
+    }
+
+    handleKeys (value: string) {
+      if (input.length >= 11) return
       if (!ref.current.equalState) {
-        setInput(input + value)
-        ref.current.nextValue = Number(input + value)
+        setInput(Calculator.handleDisplayRep(input + value))
+        ref.current.nextValue = Number(Calculator.handleNumberRep(input + value))
       } else{
         setInput(String(value))
-        ref.current.nextValue = Number(value)
+        ref.current.nextValue = Number()
         ref.current.equalState =  false
       }
     }
@@ -44,8 +73,8 @@ export default function App() {
       if (input !== '') {
         const newInput: string[] = input.split('')
         newInput.pop()
-        setInput(newInput.join(''))
-        ref.current.nextValue = Number(newInput.join(''))
+        setInput(Calculator.handleDisplayRep(newInput.join('')))
+        ref.current.nextValue = Number(Calculator.handleNumberRep(newInput.join('')))
       }
     }
 
@@ -58,7 +87,7 @@ export default function App() {
     handleDecimal () {
       if (!input.includes('.')) {
         setInput(input + '.')
-        ref.current.nextValue = Number(input + '.')
+        ref.current.nextValue = Number(Calculator.handleNumberRep(input + '.'))
       }
     }
 
@@ -88,7 +117,7 @@ export default function App() {
       }
       ref.current.previousValue = total
       ref.current.nextValue = 0
-      setInput(String(total))
+      setInput(Calculator.handleDisplayRep(String(total)))
       ref.current.operation = ''
     }
 

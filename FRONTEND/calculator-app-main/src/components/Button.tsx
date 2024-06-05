@@ -2,7 +2,7 @@ import themeClasses from "../utils/utils"
 
 export default function Button(
     {value, theme, handleKeys}: 
-    {value: string | number, theme: string, handleKeys: (value: string | number) => void}
+    {value: string, theme: string, handleKeys: (value: string) => void}
 ) {
     const baseStyle: string = `${themeClasses[theme].bgBtn3} ${themeClasses[theme].shadowBtn3} flex-grow basis-full py-3 rounded-md align-baseline`
     function getTextColor(colorScheme: string): string {
