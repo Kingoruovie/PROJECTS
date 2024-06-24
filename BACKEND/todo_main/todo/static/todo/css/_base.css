@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Ubuntu', 'Verdana', 'sans-serif';
+    font-size: 18px;
+    background-color: #0D0D0D;
+    color: #a9a9a9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    flex-grow: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-bottom: 1px solid #434343;
+}
+
+header .nav_logo {
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2.5rem);
+    font-weight: 900;
+    color: #04D976;
+    text-decoration: underline;
+}
+
+header .nav_icon {
+    padding-inline: 0.8rem;
+    padding-block: 0.6rem;
+    line-height: 1;
+    font-weight: bold;
+    font-style: italic;
+    border: 2px solid #24BF67;
+    border-radius: 50%;
+}
+
+footer {
+    font-size: 16px;
+    text-align: center;
+    padding-block: 0.6rem;
+}
+
+.nav_user span a {
+    color: #04D976;
+}
+
+.nav_user span a:visited {
+    color: #04D976;
+}
+
+
+@media (max-width: 500px) {
+    header .nav_icon {
+        padding-inline: 0.6rem;
+        padding-block: 0.4rem;
+    }
+}

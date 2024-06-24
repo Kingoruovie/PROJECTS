@@ -1,0 +1,170 @@
+#todo-container {
+    width: 85%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+article.top_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #434343;
+    padding-block: 0.5rem;
+}
+
+article.top_bar a {
+    text-align: center;
+    background-color: #00b661;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    border-radius: 0.2rem;
+}
+
+.filter {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #fff;
+    color: #018f4d;
+    border-radius: 0.2rem;
+}
+
+select {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: #fff;
+    color: #018f4d;
+    border-radius: 0.2rem;
+}
+
+select:focus {
+    border: none;
+    outline: none;
+}
+
+ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 2rem;
+}
+
+li::before {
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(15px);
+}
+
+li {
+    flex-basis: 20rem; 
+    flex-grow: 1;
+    border: 1px solid #434343;
+    background-color: #3f3f3f9c;
+    position: relative;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3rem;
+}
+
+li h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+    
+}
+
+li p {
+    margin-bottom: 1rem;
+}
+
+li .state {
+    margin-top: auto;
+    margin-bottom: 0.6rem;
+}
+
+li .btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+li .btns a {
+    text-decoration: none;
+    background-color: #00b661;
+    color: #fff;
+    flex: 100%;
+    padding-block: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 0.3rem;
+}
+
+li .btns a:nth-child(3) {
+    background-color: rgb(224, 54, 54);
+    color: #fff;
+}
+
+ul li:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li:last-child a {
+    color: #fff
+}
+
+ul li:last-child svg{
+    width: 8rem;
+    aspect-ratio: 1;
+    fill: #434343;
+}
+
+@media (max-width: 770px) {
+    article.top_bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .add_bar {
+        flex-basis: 100%;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .add_bar a {
+        width: 100%;
+    }
+
+    .filter {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    form {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    form > * {
+        flex-basis: 100%;
+        flex-grow: 1;
+        width: 100%;
+    }
+}

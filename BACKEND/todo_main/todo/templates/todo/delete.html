@@ -1,0 +1,11 @@
+{% extends "todo/base/_base.html" %}
+
+{% block main %}
+    <p>
+        Are you sure you want to delete the todo {{ todo.title }}
+    </p>
+    <form method='POST' action='{% url "todo:delete" todo.id %}'>
+        {% csrf_token %}
+        <input type='submit' value'Yes'>
+    </form>
+{% endblock main %}

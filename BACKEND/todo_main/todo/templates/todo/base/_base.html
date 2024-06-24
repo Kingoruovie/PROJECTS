@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Oru Ovie">
+    <meta name="description" content="A todo app called ByteBit">
+    <link rel="stylesheet" href="{% static 'todo/css/_base.css'%}">
+    {% block extra_head %}
+    {% endblock %}
+    <title>ByteBit</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                ByteBit
+            </div>
+            <div class="nav_user">
+                {% if user.is_authenticated %} 
+                <span class="nav_icon">{{ user.username|first|upper}}</span>
+                <span class="nav_username">
+                    {{ user.username|capfirst }}
+                </span>
+                <span>
+                    <a href="{% url 'todo:logout' %}">Logout</a>
+                </span>
+                {% else %}
+                <span>
+                    <a href="{% url 'todo:login' %}">Login</a>
+                </span>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block main %}
+        <section style="display: flex; justify-content: center;">
+            Welcome to ByteBit
+        </section>
+        {% endblock main %}
+    </main>
+    <footer>
+        <p>
+            Designed with love ♥️ by Oru Ovie &copy; Copyright, 2024
+        </p>
+    </footer>
+</body>
+</html>

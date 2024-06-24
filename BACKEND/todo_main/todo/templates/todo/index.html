@@ -1,0 +1,79 @@
+{% extends "./base/_base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'todo/css/index.css' %}">
+{% endblock %}
+
+{% block main %}
+<section id="todo-container">
+    {% if user.is_authenticated %}
+    <article class="top_bar">
+        <div class="add_bar">
+            <a href="{% url 'todo:create' %}">Add Bit</a>
+        </div>
+        <div class="filter">
+            <form action="">
+                <select name="status" id="status">
+                    <option value="PENDING">PENDING</option>
+                    <option value="IN PROGRESS">IN PROGRESS</option>
+                    <option value="COMPLETED">COMPLETED</option>
+                    <option value="DEFERRED">DEFERRED</option>
+                </select>
+
+                <select name="priority" id="priority">
+                    <option value="LOW">PENDING</option>
+                    <option value="MEDIUM">IN PROGRESS</option>
+                    <option value="HIGH">COMPLETED</option>
+                </select>
+
+                <select name="completed" id="completd">
+                    <option value="False">UNCOMPLETED</option>
+                    <option value="True">COMPLETED</option>
+                </select>
+                <input type="submit" value="Filter">
+            </form> 
+        </div>
+    </article>
+    {% endif %}
+    <ul>
+        {% if todo_list %}
+        {% for todo in todo_list %}
+            <li>
+                <h2>
+                    {{ todo.title }}
+                </h2>
+                <p>
+                    {{ todo.description|truncate_words:10 }}
+                </p>
+                <div class="state">
+                    <span>Status: {{ todo.status }}</span>
+                    <span>Priority: {{ todo.priority }}</span>
+                </div>
+                <div class="btns">
+                    <a href="{% url 'todo:toggle' todo.id %}">
+                        {% if todo.completed %} 
+                            Unmark
+                        {% else %}
+                            Mark
+                        {% endif %}
+                    </a>
+                    <a href="{% url 'todo:edit' todo.id%}">Edit</a>
+                    <a href="{% url 'todo:delete' todo.id %}">Delete</a>
+                </div>
+            </li>
+        {% endfor%}
+        <li>
+            <a href="{% url 'todo:create' %}">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+            </a>
+        </li>
+        {% else %}
+        <p>{{ error_message }}</p>
+        {% endif %}
+    </ul>
+</section>
+{% endblock %}

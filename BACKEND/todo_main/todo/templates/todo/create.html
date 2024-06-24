@@ -1,0 +1,10 @@
+{% extends 'todo/base/_base.html' %}
+
+{% block main %}
+    <form method='post' action='{% url "todo:create" %}'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type='submit' value='Create'>
+    <form>
+{% endblock main %}
+
