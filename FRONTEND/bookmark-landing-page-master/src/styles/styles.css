@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-rubik: "Rubik", sans-serif;
+  --color-soft-blue: hsl(231, 69%, 60%);
+  --color-soft-red: hsl(0, 94%, 66%);
+  --color-grayish-blue: hsl(229, 8%, 60%);
+  --color-very-dark-blue: hsl(229, 31%, 21%);
+}
+
+.svg-right {
+  @apply relative before:block before:absolute before:bg-soft-blue before:-z-1 before:right-0 before:bottom-0 before:h-3/4 before:w-4/5 before:rounded-l-full;
+}
+
+.svg-left {
+  @apply relative before:block before:absolute before:bg-soft-blue before:-z-1 before:left-0 before:bottom-0 before:h-6/7 before:w-4/5 before:rounded-r-full;
+}
