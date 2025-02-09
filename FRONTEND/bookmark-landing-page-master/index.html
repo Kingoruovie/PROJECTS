@@ -131,21 +131,27 @@
             can access them on the go.
           </p>
         </div>
-        <div class="flex flex-col border-b border-gray-300 mb-20">
+        <div
+          class="tab-btns flex flex-col border-b border-gray-300 mb-20 px-8 text-base"
+        >
           <span class="border-t border-gray-300"
-            ><button class="py-4 border-b-4 border-soft-red">
+            ><button id="bookmark" class="w-full py-4 relative active-btn">
               Simple Bookmarking
             </button></span
           >
           <span class="border-t border-gray-300"
-            ><button class="py-4">Speedy Searching</button></span
+            ><button id="search" class="w-full py-4 relative">
+              Speedy Searching
+            </button></span
           >
           <span class="border-t border-gray-300"
-            ><button class="py-4">Easy Sharing</button></span
+            ><button id="share" class="w-full py-4 relative">
+              Easy Sharing
+            </button></span
           >
         </div>
         <div class="tab-infos">
-          <div class="info">
+          <div class="bookmark active-tab">
             <div class="px-8 pb-9 svg-left">
               <img src="./images/illustration-features-tab-1.svg" alt="" />
             </div>
@@ -161,7 +167,7 @@
               <a href="#" class="hidden">More Info</a>
             </article>
           </div>
-          <div class="info hidden">
+          <div class="search hidden">
             <div class="px-8 pb-9 svg-left">
               <img src="./images/illustration-features-tab-2.svg" alt="" />
             </div>
@@ -176,7 +182,7 @@
               <a href="#">More Info</a>
             </article>
           </div>
-          <div class="info hidden">
+          <div class="share hidden">
             <div class="px-8 pb-9 svg-left">
               <img src="./images/illustration-features-tab-3.svg" alt="" />
             </div>
@@ -234,7 +240,7 @@
               <p class="text-sm">Minimum version 55</p>
             </div>
             <div>
-              <img src="./images/bg-dots.svg" alt="" />
+              <img src="./images/bg-dots.svg" alt="" class="mb-5 block" />
               <button class="bg-soft-blue text-white px-8 py-3 rounded-md">
                 Add & Install Extension
               </button>
@@ -279,7 +285,9 @@
                 <img src="./images/icon-arrow.svg" alt="" />
               </button>
             </div>
-            <div class="answer h-0 overflow-hidden">
+            <div
+              class="answer h-0 overflow-hidden transition-[height] duration-200"
+            >
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
                 tincidunt justo eget ultricies fringilla. Phasellus blandit
@@ -361,30 +369,30 @@
         <p class="uppercase tracking-[0.3rem] text-xs font-medium">
           35,000+ already joined
         </p>
-        <h2 class="text-2xl font-medium my-4">
+        <h2 class="text-2xl font-medium mt-3 mb-6">
           Stay up-to-date with what we’re doing
         </h2>
-        <form action="#" class="flex flex-col gap-4">
-          <div class="text-left bg-soft-red p-[1px] rounded-sm relative">
+        <form action="#" class="flex flex-col gap-4" novalidate>
+          <div class="text-left p-[1px] rounded-sm relative">
             <input
               type="email"
               placeholder="Enter your email address"
-              class="block focus:outline-none w-full border border-soft-red rounded-sm bg-white text-very-dark-blue px-5 py-2 placeholder:text-gray-400"
+              class="block focus:outline-none w-full rounded-sm bg-white text-very-dark-blue px-5 py-2 placeholder:text-gray-400"
               required
             />
             <img
               src="./images/icon-error.svg"
               alt=""
-              class="absolute top-3 right-4"
+              class="absolute top-3 right-4 hidden"
             />
-            <span class="block text-xs italic p-1"
+            <span class="hidden text-[11px] leading-6 font-medium italic px-2"
               >Whoops, make sure it's an email</span
             >
           </div>
           <input
             type="submit"
             value="Contact Us"
-            class="bg-soft-red rounded-sm py-4 text-sm font-medium"
+            class="bg-soft-red rounded-sm py-3 text-sm font-medium"
           />
         </form>
       </section>
