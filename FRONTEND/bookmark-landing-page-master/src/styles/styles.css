@@ -20,3 +20,7 @@
 .active-btn {
   @apply after:block after:absolute after:h-1 after:w-2/5 after:bg-soft-red after:bottom-0 after:left-1/2 after:-translate-x-1/2 text-very-dark-blue;
 }
+
+.active-tab {
+  @apply md:flex;
+}

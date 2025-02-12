@@ -15,20 +15,22 @@
     <script src="./build/script/index.js" defer></script>
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
-  <body class="font-rubik text-grayish-blue text-[15px] leading-7">
-    <header class="flex items-center justify-between px-8 pt-9">
+  <body class="font-rubik text-grayish-blue text-[15px] leading-7 md:text-lg">
+    <header
+      class="flex items-center justify-between px-8 pt-9 container mx-auto md:px-0"
+    >
       <div class="logo">
         <img src="./images/logo-bookmark.svg" alt="Bookmark logo" />
       </div>
-      <div class="hamburger">
+      <div class="hamburger md:hidden">
         <button class="flex items-center justify-center">
           <img src="./images/icon-hamburger.svg" alt="Open menu" />
         </button>
       </div>
       <nav
-        class="z-1 flex flex-col items-center fixed bg-very-dark-blue h-screen w-screen top-0 left-0 opacity-95 px-8 py-9 transition-transform translate-x-[100vw] duration-500"
+        class="z-1 flex flex-col items-center fixed bg-very-dark-blue h-screen w-screen top-0 left-0 opacity-95 px-8 py-9 transition-transform translate-x-[100vw] duration-500 md:opacity-100 md:static md:w-fit md:h-fit md:translate-x-0 md:py-0 md:bg-transparent md:px-0"
       >
-        <div class="w-full flex items-center justify-between">
+        <div class="w-full flex items-center justify-between md:hidden">
           <div class="logo">
             <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
@@ -54,26 +56,34 @@
           </div>
         </div>
         <ul
-          class="mb-auto uppercase text-white text-xl tracking-widest pt-9 w-full"
+          class="mb-auto uppercase text-white text-xl tracking-widest pt-9 w-full md:text-very-dark-blue md:flex md:pt-0 md:items-center md:text-base md:gap-12"
         >
-          <li class="border-t border-grayish-blue py-5 text-center">
-            <a href="#">Features</a>
+          <li
+            class="border-t border-grayish-blue py-5 text-center md:border-none"
+          >
+            <a href="#" class="md:hover:text-soft-red">Features</a>
           </li>
-          <li class="border-t border-grayish-blue py-5 text-center">
-            <a href="#">Pricing</a>
+          <li
+            class="border-t border-grayish-blue py-5 text-center md:border-none"
+          >
+            <a href="#" class="md:hover:text-soft-red">Pricing</a>
           </li>
-          <li class="border-t border-grayish-blue py-5 text-center">
-            <a href="#">Contact</a>
+          <li
+            class="border-t border-grayish-blue py-5 text-center md:border-none"
+          >
+            <a href="#" class="md:hover:text-soft-red">Contact</a>
           </li>
-          <li class="border-t border-grayish-blue py-5 text-center">
+          <li
+            class="border-t border-grayish-blue py-5 text-center md:border-none"
+          >
             <a
               href="#"
-              class="border-2 block py-2 rounded-md font-medium transition-colors duration-300 hover:bg-white hover:text-[#242A45]"
+              class="border-2 block py-2 rounded-md font-medium transition-colors duration-300 hover:bg-white hover:text-[#242A45] md:bg-soft-red md:text-white md:px-7 md:hover:text-soft-red md:hover:border-soft-red"
               >Login</a
             >
           </li>
         </ul>
-        <div class="flex gap-10 items-center">
+        <div class="flex gap-10 items-center md:hidden">
           <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
               <path
@@ -96,14 +106,17 @@
       </nav>
     </header>
     <main class="mt-20">
-      <section id="introduction" class="flex flex-col gap-16">
-        <div class="px-3 svg-right">
+      <section
+        id="introduction"
+        class="flex flex-col gap-16 md:flex-row-reverse md:items-center"
+      >
+        <div class="px-3 svg-right basis-full md:px-0">
           <img
             src="./images/illustration-hero.svg"
             alt="Illustration of a browser"
           />
         </div>
-        <article class="px-8 text-center">
+        <article class="px-8 text-center md:text-left basis-full lg:ml-20">
           <h1 class="font-medium text-3xl text-very-dark-blue">
             A Simple Bookmark Manager
           </h1>
@@ -112,19 +125,27 @@
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </p>
-          <div class="flex text-sm font-medium justify-between">
-            <button class="bg-soft-blue text-white py-3 px-4 rounded-md">
+          <div
+            class="flex text-sm font-medium justify-between md:justify-start gap-3"
+          >
+            <button
+              class="bg-soft-blue text-white py-3 px-4 rounded-md hover:border-2 hover:border-soft-blue hover:text-soft-blue hover:bg-transparent cursor-pointer"
+            >
               Get it on Chrome
             </button>
-            <button class="text-very-dark-blue shadow-lg py-3 px-4 rounded-md">
+            <button
+              class="text-very-dark-blue shadow-lg py-3 px-4 rounded-md hover:border-2 hover:border-grayish-blue hover:text-grayish-blue hover:bg-transparent cursor-pointer"
+            >
               Get it on Firefox
             </button>
           </div>
         </article>
       </section>
-      <section id="features" class="mt-36 text-center">
-        <div class="px-8">
-          <h2 class="text-very-dark-blue font-medium text-2xl">Features</h2>
+      <section id="features" class="mt-36 text-center mx-auto md:text-left">
+        <div class="px-8 lg:w-1/2 mx-auto">
+          <h2 class="text-very-dark-blue font-medium text-2xl text-center">
+            Features
+          </h2>
           <p class="mt-3 mb-8">
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
@@ -132,19 +153,19 @@
           </p>
         </div>
         <div
-          class="tab-btns flex flex-col border-b border-gray-300 mb-20 px-8 text-base"
+          class="tab-btns flex flex-col border-b border-gray-300 mb-20 px-8 text-base md:flex-row lg:w-2/3 mx-auto"
         >
-          <span class="border-t border-gray-300"
+          <span class="border-t border-gray-300 basis-full md:border-none"
             ><button id="bookmark" class="w-full py-4 relative active-btn">
               Simple Bookmarking
             </button></span
           >
-          <span class="border-t border-gray-300"
+          <span class="border-t border-gray-300 basis-full md:border-none"
             ><button id="search" class="w-full py-4 relative">
               Speedy Searching
             </button></span
           >
-          <span class="border-t border-gray-300"
+          <span class="border-t border-gray-300 basis-full border-none"
             ><button id="share" class="w-full py-4 relative">
               Easy Sharing
             </button></span
@@ -152,10 +173,10 @@
         </div>
         <div class="tab-infos">
           <div class="bookmark active-tab">
-            <div class="px-8 pb-9 svg-left">
+            <div class="px-8 pb-9 svg-left basis-full">
               <img src="./images/illustration-features-tab-1.svg" alt="" />
             </div>
-            <article class="px-8 mt-10">
+            <article class="px-8 mt-10 basis-full">
               <h3 class="text-very-dark-blue font-medium text-2xl mb-2">
                 Bookmark in one click
               </h3>
@@ -207,7 +228,9 @@
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </p>
-        <div class="flex flex-col gap-10 w-[90%] mx-auto mt-10">
+        <div
+          class="flex flex-col gap-10 w-[90%] mx-auto mt-10 lg:flex-row justify-center items-center"
+        >
           <article
             class="shadow-lg rounded-2xl flex flex-col gap-10 pt-10 pb-5"
           >
@@ -267,7 +290,10 @@
           </article>
         </div>
       </section>
-      <section id="FAQ" class="mt-36 text-center px-8">
+      <section
+        id="FAQ"
+        class="mt-36 text-center px-8 container md:px-50 mx-auto"
+      >
         <h2 class="text-very-dark-blue font-medium text-2xl mb-5">
           Frequently Asked Questions
         </h2>
@@ -372,8 +398,12 @@
         <h2 class="text-2xl font-medium mt-3 mb-6">
           Stay up-to-date with what we’re doing
         </h2>
-        <form action="#" class="flex flex-col gap-4" novalidate>
-          <div class="text-left p-[1px] rounded-sm relative">
+        <form
+          action="#"
+          class="flex flex-col gap-4 lg:flex-row lg:w-1/2 mx-auto"
+          novalidate
+        >
+          <div class="text-left p-[1px] rounded-sm relative md:grow">
             <input
               type="email"
               placeholder="Enter your email address"
@@ -392,11 +422,13 @@
           <input
             type="submit"
             value="Contact Us"
-            class="bg-soft-red rounded-sm py-3 text-sm font-medium"
+            class="bg-soft-red rounded-sm py-3 text-sm font-medium md:grow-0 px-20"
           />
         </form>
       </section>
-      <header class="bg-very-dark-blue text-white py-10 flex flex-col gap-8">
+      <header
+        class="bg-very-dark-blue text-white py-10 flex flex-col gap-8 lg:flex-row lg:px-[10%]"
+      >
         <div class="flex justify-center">
           <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" fill-rule="evenodd">
@@ -415,9 +447,9 @@
             </g>
           </svg>
         </div>
-        <nav>
+        <nav class="lg:mr-auto">
           <ul
-            class="flex flex-col items-center gap-4 uppercase tracking-widest"
+            class="flex flex-col items-center gap-4 uppercase tracking-widest lg:flex-row"
           >
             <li><a href="#">Features</a></li>
             <li><a href="#">Pricing</a></li>
