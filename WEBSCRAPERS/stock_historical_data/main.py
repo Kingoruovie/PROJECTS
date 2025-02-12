@@ -11,9 +11,8 @@ from pathlib import Path
 
 MOST_ACTIVE_URL = "https://finance.yahoo.com/most-active/?count=100&offset=0"
 URL_BASE = "https://finance.yahoo.com/quote/"
-URL_OTHERS = "/history?period1=345427200&period2=1709251200&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true"
-
-path_to_file = Path(r"./stock_historical_data/data/")
+URL_OTHERS = "/history/?period1=1388534400&period2=1735603200&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true"
+path_to_file = Path(r"./")
 data_format = [
     "Date",
     "Open",
@@ -25,7 +24,7 @@ data_format = [
 ]
 
 chrome_options = Options()
-# chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")
 
 
@@ -35,10 +34,10 @@ def scrape_stock_name(url):
     driver.implicitly_wait(10)
     time.sleep(5)
     
-    symbols = driver.find_elements(by=By.CSS_SELECTOR, value='table tbody tr.simpTblRow > td:nth-child(1) a')
-    names = driver.find_elements(by=By.CSS_SELECTOR, value='table tbody tr.simpTblRow > td:nth-child(2)')
+    symbols = driver.find_elements(by=By.CSS_SELECTOR, value='table tbody tr.yf-paf8n5 > td:nth-child(1) a')
+    names = driver.find_elements(by=By.CSS_SELECTOR, value='table tbody tr.yf-paf8n5 > td:nth-child(2)')
     
-    with open(file=path_to_file / "stock_name.txt", mode="w+", encoding="UTF-8", newline="\n") as file:
+    with open(file=path_to_file / "stock_name.txt", mode="w", encoding="UTF-8", newline="\n") as file:
         for symbol, name in zip(symbols, names):
             file.write(symbol.text.strip() + "==" + name.text.strip() + "\n")
     
@@ -56,17 +55,17 @@ def scrape_historical_price(stock):
     driver.implicitly_wait(10)
     time.sleep(5)
     
-    table_height = driver.execute_script("return document.querySelector('table[data-test=\"historical-prices\"]').scrollHeight;")
+    table_height = driver.execute_script("return document.querySelector('div[data-testid=\"history-table\"] table').scrollHeight;")
     while True:
-        driver.execute_script("window.scrollTo(0, document.querySelector('table[data-test=\"historical-prices\"]').scrollHeight);")
+        driver.execute_script("window.scrollTo(0, document.querySelector('div[data-testid=\"history-table\"] table').scrollHeight);")
         time.sleep(10)
-        new_page_height = driver.execute_script("return document.querySelector('table[data-test=\"historical-prices\"]').scrollHeight;")
+        new_page_height = driver.execute_script("return document.querySelector('div[data-testid=\"history-table\"] table').scrollHeight;")
         if table_height == new_page_height:
             break
         table_height = new_page_height
 
 
-    price_details = driver.find_elements(by=By.CSS_SELECTOR, value='table[data-test="historical-prices"] tbody tr.BdT')
+    price_details = driver.find_elements(by=By.CSS_SELECTOR, value='div[data-testid="history-table"] tbody tr.yf-1jecxey')
     for price_detail in price_details:
         data_columns = price_detail.find_elements(by=By.CSS_SELECTOR, value="td")
         if len(data_columns) > 2:
@@ -98,19 +97,16 @@ def scrape_historical_price(stock):
 if __name__ == "__main__":
     # scrape_stock_name(MOST_ACTIVE_URL)
 
-    with open(file="./stock_historical_data/data/stock_name.txt", mode="r") as file:
+    with open(file="./stock_name.txt", mode="r") as file:
         stocks = file.readlines()
-        for count, line in zip(range(23, 101), stocks[22:]):
+        for count, line in zip(range(1, 101), stocks):
             stock, company = line.strip().split("==")
-
-            if count == 1 or stock == "META":
-                continue
 
             while "." in company or "," in company:
                 company = company.replace(".", "")
                 company = company.replace(",", "")
 
-            
+
             returnd_data = scrape_historical_price(stock=stock)
             file_name = ("_").join(company.split(" ")) + ".csv"
 

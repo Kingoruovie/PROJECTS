@@ -1,0 +1,100 @@
+NVDA==NVIDIA Corporation
+INTC==Intel Corporation
+BBAI==BigBear.ai Holdings, Inc.
+TSLA==Tesla, Inc.
+SMCI==Super Micro Computer, Inc.
+PLTR==Palantir Technologies Inc.
+RGTI==Rigetti Computing, Inc.
+NIO==NIO Inc.
+SCHW==The Charles Schwab Corporation
+ACHR==Archer Aviation Inc.
+BABA==Alibaba Group Holding Limited
+F==Ford Motor Company
+LYFT==Lyft, Inc.
+AAPL==Apple Inc.
+BTG==B2Gold Corp.
+BTE==Baytex Energy Corp.
+BBD==Banco Bradesco S.A.
+LCID==Lucid Group, Inc.
+NU==Nu Holdings Ltd.
+SHOP==Shopify Inc.
+AMD==Advanced Micro Devices, Inc.
+CLF==Cleveland-Cliffs Inc.
+SOUN==SoundHound AI, Inc.
+PFE==Pfizer Inc.
+TEM==Tempus AI, Inc.
+T==AT&T Inc.
+BB==BlackBerry Limited
+AAL==American Airlines Group Inc.
+SOFI==SoFi Technologies, Inc.
+ITUB==Itaú Unibanco Holding S.A.
+KO==The Coca-Cola Company
+CMCSA==Comcast Corporation
+AES==The AES Corporation
+GOLD==Barrick Gold Corporation
+GRAB==Grab Holdings Limited
+RIG==Transocean Ltd.
+UBER==Uber Technologies, Inc.
+PSLV==Sprott Physical Silver Trust
+RXRX==Recursion Pharmaceuticals, Inc.
+SNAP==Snap Inc.
+WBD==Warner Bros. Discovery, Inc.
+WBA==Walgreens Boots Alliance, Inc.
+CLSK==CleanSpark, Inc.
+RIVN==Rivian Automotive, Inc.
+KGC==Kinross Gold Corporation
+MARA==MARA Holdings, Inc.
+IQ==iQIYI, Inc.
+ABEV==Ambev S.A.
+AMZN==Amazon.com, Inc.
+HOOD==Robinhood Markets, Inc.
+AGNC==AGNC Investment Corp.
+RKLB==Rocket Lab USA, Inc.
+FIS==Fidelity National Information Services, Inc.
+VALE==Vale S.A.
+HBAN==Huntington Bancshares Incorporated
+RIOT==Riot Platforms, Inc.
+CPNG==Coupang, Inc.
+CDE==Coeur Mining, Inc.
+NOK==Nokia Oyj
+VRN==Veren Inc.
+KMI==Kinder Morgan, Inc.
+BAC==Bank of America Corporation
+COTY==Coty Inc.
+MRK==Merck & Co., Inc.
+GOOGL==Alphabet Inc.
+WFC==Wells Fargo & Company
+PBR==Petróleo Brasileiro S.A. - Petrobras
+JD==JD.com, Inc.
+BP==BP p.l.c.
+PINS==Pinterest, Inc.
+IONQ==IonQ, Inc.
+BEKE==KE Holdings Inc.
+PYPL==PayPal Holdings, Inc.
+CSCO==Cisco Systems, Inc.
+NWL==Newell Brands Inc.
+OKLO==Oklo Inc.
+ET==Energy Transfer LP
+XPEV==XPeng Inc.
+AVGO==Broadcom Inc.
+QS==QuantumScape Corporation
+ALAB==Astera Labs, Inc.
+JOBY==Joby Aviation, Inc.
+GGB==Gerdau S.A.
+GOOG==Alphabet Inc.
+YMM==Full Truck Alliance Co. Ltd.
+ASTS==AST SpaceMobile, Inc.
+UAA==Under Armour, Inc.
+AUR==Aurora Innovation, Inc.
+BCS==Barclays PLC
+ERIC==Telefonaktiebolaget LM Ericsson (publ)
+VZ==Verizon Communications Inc.
+AMCR==Amcor plc
+PCG==PG&E Corporation
+HL==Hecla Mining Company
+CCL==Carnival Corporation & plc
+FCX==Freeport-McMoRan Inc.
+IAG==IAMGOLD Corporation
+NGD==New Gold Inc.
+IP==International Paper Company
+PTON==Peloton Interactive, Inc.
